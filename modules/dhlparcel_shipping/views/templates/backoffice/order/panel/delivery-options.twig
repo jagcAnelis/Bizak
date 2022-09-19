@@ -1,0 +1,44 @@
+{% if deliveryOptions is not empty %}
+    <div id="dhlparcel_shipping_panel_delivery_options">
+        <div class="clear"></div>
+        {% for option in deliveryOptions %}
+            <div class="dhlparcel_shipping_panel_delivery_option_container" data-key="{{ option.key }}">
+
+                <input class="dhlparcel_shipping_panel_delivery_option"
+                       name="dhlparcel_shipping_delivery_options[]"
+                       id="dhlparcel_shipping_panel_delivery_option_{{ option.key }}"
+                       value="{{ option.key }}"
+                       type="radio"
+                       data-exclusions="{{ option.exclusionData|e('html_attr') }}"
+                        {% if option.preselected == true %}
+                            checked="checked"
+                        {% endif %}
+                >
+                <label class="dhlparcel_shipping_panel_delivery_option_label" for="dhlparcel_shipping_panel_delivery_option_{{ option.key }}">
+                    <div class="dhlparcel_shipping_panel_delivery_option_icon">
+                        <img src="{{ option.imageUrl }}">
+                    </div>
+                    <div class="dhlparcel_shipping_panel_delivery_option_description">
+                        {{ option.description }}
+                    </div>
+                </label>
+
+            </div>
+        {% endfor %}
+
+        <div class="clear"></div>
+        {% for option in deliveryOptions %}
+
+            {% if option.inputTemplate is not empty %}
+                <div style="display:none" class="dhlparcel_shipping_panel_delivery_option_input" data-option-input="{{ option.key }}">
+                    {{ option.inputTemplate|raw }}
+                </div>
+            {% endif  %}
+
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="dhlparcel_shipping_panel_message_unavailable">
+        <span>{{ 'Método de entrega'|trans }}</span>
+    </div>
+{% endif %}

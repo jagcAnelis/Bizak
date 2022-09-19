@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="/home/templay9/public_html/demo/Prestashop/PRS06/PRS169_tools/themes/PRS01/modules/ps_specials/views/templates/hook/ps_specials.tpl" source-language="fr-FR" target-language="fr-FR" datatype="plaintext">
+    <body>
+      <trans-unit id="8af828f302b91d1f905dc35acc43efaa">
+        <source>Special products</source>
+        <target>Special products</target>
+        <note>Context:
+File: /home/templay9/public_html/demo/Prestashop/PRS06/PRS169_tools/themes/PRS01/modules/ps_specials/views/templates/hook/ps_specials.tpl:30</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="/home/templay9/public_html/demo/Prestashop/PRS06/PRS169_tools/themes/PRS01/modules/ps_newproducts/views/templates/hook/ps_newproducts.tpl" source-language="fr-FR" target-language="fr-FR" datatype="plaintext">
+    <body>
+      <trans-unit id="9ff0635f5737513b1a6f559ac2bff745">
+        <source>New products</source>
+        <target>Nouveaux produits</target>
+        <note>Context:
+File: /home/templay9/public_html/demo/Prestashop/PRS06/PRS169_tools/themes/PRS01/modules/ps_newproducts/views/templates/hook/ps_newproducts.tpl:29</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

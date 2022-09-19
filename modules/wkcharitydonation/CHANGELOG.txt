@@ -1,0 +1,26 @@
+################################################################################
+ChangeLog : wkcharitydonation V4.0.0 to V4.0.1 | COMPATIBLE:: PRESTASHOP V1.7
+################################################################################
+
+## Bug Fixe :
+- Fixed donation expiry not disableing in some case.
+- Updated licence.
+
+## New Features :
+- Added Donation statistics.
+- Added tiny mce for description.
+
+
+################################################################
+ChangeLog : wkcharitydonation V4.0.0 | COMPATIBLE:: PRESTASHOP V1.7
+################################################################
+
+Release Date:
+
+New Features :
+
+- Run various charity donation simultaneously.
+- Set donation amount according to the will of customer.
+- Advertise all the campaigns on various pages of the store.
+- Global Advertisement banners & banners for individual donation campaigns are fully configurable.
+- Provide donation block on cart page.

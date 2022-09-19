@@ -1,0 +1,246 @@
+			
+			    
+				
+				
+				Message from {shop_name}
+				
+				@media only screen and (max-width: 300px){
+					body {
+					    width:218px !important;
+					    margin:auto !important;
+					}
+					.table {width:195px !important;margin:auto !important; background-color:#fff;}
+				}
+				@media only screen and (min-width: 301px) and (max-width: 500px) {
+				    body {width:308px!important;margin:auto!important;}
+				    .table {width:285px!important;margin:auto!important;}
+				}
+				@media only screen and (min-width: 501px) and (max-width: 768px) {
+				    body {width:478px!important;margin:auto!important;}
+				    .table {width:450px!important;margin:auto!important;}
+				    .logo, .titleblock, .linkbelow, .box, .footer, .space_footer{width:auto!important;display: block!important;}
+				}
+				@media only screen and (max-device-width: 480px) {
+				    body {width:308px!important;margin:auto!important;}
+				    .table {width:285px;margin:auto!important;}
+				}
+				
+			    
+			    
+				
+				    
+					&nbsp;
+					
+					    
+						
+						    
+							
+							    
+							
+						    
+						
+					    
+					    
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Hola {Customer_Name},
+Ya queda poco para tu CUMPLEAÑOS y en Bizak queremos que sea aún más especial.
+Celébralo con nosotros con este cupón especialmente creado para ti.
+Te regalamos 5 euros para tu próxima compra superior a 30 euros.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Utiliza el código:
+{Coupon_Code}
+
+
+
+
+Tu código tiene validez hasta: {expiry_date}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Disfruta de tu regalo, solo debes introducir el código en tu carrito de compra y se aplicará el descuento para tu compra superior a 30 euros.
+Aprovéchalo cuanto antes!!! Muchas gracias por confirmar en Bizak!! {shop_name} (Visita nuestra Web)
+Si tienes cualquier duda puedes contactarnos en:
+Tf: 94 434 14 90 Email: shop@bizak.es
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+¡¡¡Feliz Compra!!!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+					&nbsp;
+				    
+				
+			
+			
+                        

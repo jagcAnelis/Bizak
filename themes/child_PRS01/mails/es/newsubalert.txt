@@ -1,0 +1,5 @@
+[{shop_url}] 
+
+Hola, 
+
+Se ha añadido una nueva notificación de disponibilidad para el producto {productname}

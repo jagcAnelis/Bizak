@@ -1,0 +1,18 @@
+{% if servicePoints is not empty %}
+    {% for servicePoint in servicePoints %}
+        <hr/>
+        <div class="dhlparcel_shipping_panel_servicepoint_location" data-servicepoint-id="{{ servicePoint.id|e('html_attr') }}">
+            <strong>{{ servicePoint.name }}</strong><br/>
+            <span>
+                {{ servicePoint.address.street }} {{ servicePoint.address.number }},
+                {{ servicePoint.address.postalCode }},
+                {{ servicePoint.address.city }}
+            </span>
+        </div>
+    {% endfor %}
+{% else %}
+    <hr/>
+    <div style="overflow-x:hidden; font-size:smaller; white-space: nowrap; text-overflow: ellipsis; text-align:center;">
+        <strong>{{ 'No DHL ServicePoint found'|trans }}</strong>
+    </div>
+{% endif %}

@@ -1,0 +1,6 @@
+La tua opinione conta
+Stimato/a {firstname},
+Grazie per il tuo acquisto in {storename}. Speriamo che l'esperienza d'acquisto sia stata soddisfacente.
+Ci piacerebbe chiederti un minuto del tuo tempo per valutare i nostri prodotti ed i servizi offerti dal nostro negozio:
+Clicca qui per scrivere un commento: {link}
+Grazie!

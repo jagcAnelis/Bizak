@@ -1,0 +1,7 @@
+Réponse à votre commentaire
+Cher/Chère {firstname},
+Vous avez reçu une réponse au commentaire que vous avez écrit sur {object} :
+{stars}/10 - {title}
+"{comment}"
+Réponse : "{answer}"
+Cordialement,

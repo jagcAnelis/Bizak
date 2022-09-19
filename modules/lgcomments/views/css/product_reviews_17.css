@@ -1,0 +1,153 @@
+#lgcomment.page-product-box {
+    box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, .2);
+    margin-top: 2rem;
+    background: #fff;
+    padding: 1.25rem 1.875rem;
+    display: inline-block;
+    width: 100%;
+}
+
+#lgcomment h3 {
+    border: none;
+    border-bottom: 3px solid #2fb5d2;
+    color: #2fb5d2;
+    padding: .5em 1em;
+    font-size: 15px;
+}
+
+#lgcomment .content-button {
+    text-align: center;
+    margin: 0px 0px 10px 0px;
+}
+
+/*
+#lgcomment .content-button .lgcomment_button {
+    border: 1px solid #2fb5d2;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50px;
+    color: #2fb5d2;
+    margin: 0;
+    cursor: pointer;
+}
+
+#lgcomment .content-button .lgcomment_button:hover {
+    background: #2fb5d2;
+    color: #FFFFFF;
+}
+*/
+
+#lgcomment .productComment {
+    margin-bottom: 25px;
+}
+
+#lgcomment .productComment .content-block {
+    border-left: 1px solid #2fb5d2;
+}
+
+#lgcomment .productComment .nick {
+    font-size: .86rem;
+    color: #222222;
+}
+
+#lgcomment .productComment .date {
+    font-size: .72rem;
+    color: #7a7a7a;
+}
+
+#lgcomment .productComment .title {
+    font-size: 1rem;
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#lgcomment .productComment .comment {
+    font-size: 0.95rem;
+    color: #555555;
+}
+
+#lgcomment .productComment .answer {
+    padding-left: 50px;
+    color: #2fb5d2;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.lgcomment_summary {
+    border-bottom: 3px solid #2fb5d2;
+    display: table;
+    padding: 20px 25px;
+    font-family:"Open Sans",sans-serif;
+    width: 100%;
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #777777;
+}
+
+.commentfilter {
+    float:left;
+    width:12%;
+    cursor: pointer;
+}
+.commentfiltertitle {
+    float:left;
+    width:100%;
+    cursor: pointer;
+}
+.commentfilterreset {
+    float:left;
+    width:14%;
+    cursor: pointer;
+}
+
+.comment_anchor{
+    cursor: pointer;
+}
+/*@media (max-width: 768px) {*/
+/*.productComment table,*/
+/*.productComment td,*/
+/*.productComment tr {*/
+/*display: block;*/
+/*}*/
+/*}*/
+
+@media (max-width: 768px ) {
+    #lgcomment .productComment .info-block {
+        text-align: center;
+    }
+
+    #lgcomment .productComment .nick {
+        font-size: 1rem;
+    }
+
+    #lgcomment .productComment .date {
+        font-size: .90rem;
+    }
+
+    #lgcomment .productComment .content-block {
+        border: none;
+        border-bottom: 1px solid #DDDDDD;
+        margin-top: 20px;
+        padding-bottom: 25px;
+    }
+    .commentfilter {
+        float:none;
+        width:70%;
+        cursor: pointer;
+    }
+    .commentfilter {
+        float:none;
+        width:70%;
+        margin-right:0%;
+        cursor: pointer;
+    }
+    .commentfilterreset {
+        float:none;
+        width:70%;
+        cursor: pointer;
+    }
+}
+
+.comment_anchor {
+    cursor: pointer;
+}

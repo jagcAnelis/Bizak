@@ -1,0 +1,12 @@
+name: Categories product 2
+description: 
+enabled_text: false
+required_text: false
+enabled_link: false
+enabled_image: false
+css:
+  -
+    path: views/templates/front/categoriesproduct2/css/categoriesproduct2.css
+    priority: 200
+    position: head
+    server: local    

@@ -1,0 +1,15 @@
+{% if sizes is not empty %}
+    <div id="dhlparcel_shipping_panel_sizes">
+        {% for size in sizes %}
+            <div>
+                    <input type="radio" class="dhlparcel_shipping_panel_size" id="dhlparcel_shipping_panel_size_{{ size.key }}" name="dhlparcel_shipping_size" value="{{ size.key }}">
+                    <label for="dhlparcel_shipping_panel_size_{{ size.key }}">{{ size.key }}</label>
+                    <span>( {{ size.minWeightKg }}-{{ size.maxWeightKg }} kg, {{ size.dimensions.maxLengthCm }}x{{ size.dimensions.maxWidthCm }}x{{ size.dimensions.maxHeightCm }} cm )</span>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="dhlparcel_shipping_panel_message_unavailable">
+        <span>{{'No disponible'|trans }}</span>
+    </div>
+{% endif %}

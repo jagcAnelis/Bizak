@@ -1,0 +1,27 @@
+.lgtabcontent label.error {
+    position: relative;
+}
+
+.lgtabcontent input.error {
+    border: 1px solid #D27C82;
+    background-color: #FFE2E4;
+}
+
+.lgcomment_validate_error_message {
+    background: #FFE2E4;
+    color: #D27C82;
+    display: none;
+}
+
+.lgcomment_validate_error_message span.lgcomment_validate_error_close_button {
+    border: 1px solid red;
+    border-radius: 10px;
+    float: right;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.lgtabcontent h3 {
+    border: 0px!important;
+}

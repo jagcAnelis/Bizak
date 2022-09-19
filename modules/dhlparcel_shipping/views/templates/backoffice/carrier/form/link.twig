@@ -1,0 +1,25 @@
+<span class="switch prestashop-switch fixed-width-lg">
+    <input type="radio"
+           name="dhlparcel_shipping_link"
+           id="dhlparcel_shipping_no_link"
+           value="0"
+            {% if link is same as(false) %}
+                checked="checked"
+            {% endif %}
+    >
+    <label for="dhlparcel_shipping_no_link">
+        No
+    </label>
+    <input type="radio"
+           name="dhlparcel_shipping_link"
+           id="dhlparcel_shipping_link"
+           value="1"
+            {% if link is same as(true) %}
+                checked="checked"
+            {% endif %}
+    >
+    <label for="dhlparcel_shipping_link">
+        Yes
+    </label>
+    <a class="slide-button btn"></a>
+</span>

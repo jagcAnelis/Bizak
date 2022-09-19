@@ -1,0 +1,2 @@
+Emails inviati correttamente
+Le email sono stati inviati per i seguenti ordini: {pedidos}

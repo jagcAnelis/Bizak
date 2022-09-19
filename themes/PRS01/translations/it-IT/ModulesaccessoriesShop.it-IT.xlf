@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="/home/templay9/public_html/demo/Prestashop/PRS06/PRS169_tools/themes/PRS01/templates/catalog/product.tpl" source-language="it-IT" target-language="it-IT" datatype="plaintext">
+    <body>
+      <trans-unit id="14230d11143a03f4330c6433d5032a9d">
+        <source>Prev</source>
+        <target>Prev</target>
+        <note>Context:
+File: /home/templay9/public_html/demo/Prestashop/PRS06/PRS169_tools/themes/PRS01/templates/catalog/product.tpl:275</note>
+      </trans-unit>
+      <trans-unit id="10ac3d04253ef7e1ddc73e6091c0cd55">
+        <source>Next</source>
+        <target>Next</target>
+        <note>Context:
+File: /home/templay9/public_html/demo/Prestashop/PRS06/PRS169_tools/themes/PRS01/templates/catalog/product.tpl:276</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

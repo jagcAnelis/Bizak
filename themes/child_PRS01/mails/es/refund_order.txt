@@ -1,0 +1,13 @@
+{shop_url}
+
+Hola {firstname},
+
+Reembolso del pedido {order_name}.
+
+Hemos realizado el reembolso de su pedido con la referencia {order_name} de {shop_name}.
+
+Puedes ver la información de tu pedido y descargar la factura de abono en nuestra tienda. Visita la sección [Mis pedidos y detalles]({history_url}) en tu cuenta de cliente.
+
+Si tienes una cuenta de invitado, puedes seguir tu pedido desde la sección: ["Seguimiento de invitado"]({guest_tracking_url}) de nuestra tienda.
+
+[{shop_name}]({shop_url})

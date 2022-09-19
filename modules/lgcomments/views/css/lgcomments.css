@@ -1,0 +1,119 @@
+.toolTip {
+  position: relative;
+}
+.tooltipDesc {
+	position: absolute;
+    border-style: solid;
+    border-color: #00aff0;
+	background-color: #FFF;
+	color: #000;
+	height: 100px;
+	width: 230px;
+	visibility: hidden;
+	opacity: 1;
+	border-radius: 5px;
+	padding: 7px;
+    z-index:99;
+    margin:20px 0 0 -40px;
+}
+.toolTip:hover .tooltipDesc {
+    visibility: visible;
+    opacity: 1;
+}
+.lgmenu {
+    min-width: 250px;
+    margin: 5px !important;
+}
+.lgbutton{
+    width:75px;
+}
+.lgdays{
+    width:40px;
+}
+.lglarge {
+    font-size:large;
+}
+.lgoverflow{
+    overflow-x:auto;
+}
+.lgwidth{
+    width:70%;
+}
+.lgfloat{
+    float:left;
+    margin: 0 5px;
+}
+.lgfloatright{
+    float:right;
+}
+.lgwidget{
+    max-width:200px;
+    max-height:200px;
+}
+.lgclear{
+    clear:both;
+}
+.lglowercase{
+    text-transform: lowercase;
+}
+.lgunderline{
+    text-decoration:underline;
+}
+.lgstatus{
+    color:white;
+    padding:4px;
+    border-radius:5px;
+    line-height:25px;
+}
+.lgred{
+    color:red;
+}
+.lgsilverbutton{
+    background-color:silver;
+    color:black;
+    padding:4px;
+    border-radius:5px;
+    line-height:25px;
+}
+.lgredbutton{
+    background-color:red;
+    color:white;
+    padding:4px;
+    border-radius:5px;
+    line-height:25px;
+}
+.lggreenbutton{
+    background-color:green;
+    color:white;
+    padding:4px;
+    border-radius:5px;
+    line-height:25px;
+}
+.lggreybutton{
+    background-color:grey;
+    color:white;
+    padding:4px;
+    border-radius:5px;
+    line-height:25px;
+}
+.lgtable{
+    border-collapse:collapse;
+    width:100%;
+    text-align:center;
+}
+.lgcenter{
+    text-align:center;
+}
+.lgupper{
+    text-transform:uppercase;
+}
+.lgblue{
+    color:white;
+    font-weight:bold;
+}
+.lgbold{
+    font-weight:bold;
+}
+.lgpadding{
+    padding:10px;
+}

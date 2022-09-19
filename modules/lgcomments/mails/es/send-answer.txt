@@ -1,0 +1,7 @@
+Respuesta a su comentario
+Estimado/a {firstname},
+Ha recibido una respuesta al comentario que escribió sobre {object}:
+{stars}/10 - {title}
+"{comment}"
+Respuesta: "{answer}"
+Saludos,

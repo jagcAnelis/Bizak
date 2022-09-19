@@ -1,0 +1,7 @@
+Su opinión nos interesa
+Estimado/a {firstname},
+Gracias por su compra en {storename}, esperamos que esté satisfecho/a.
+Por favor tome unos minutos para valorar nuestros productos y nuestra tienda online.
+{product_details}
+Haga clic aquí para escribir un comentario: {link}
+Gracias!

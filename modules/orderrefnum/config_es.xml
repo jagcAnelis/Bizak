@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>orderrefnum</name>
+    <displayName><![CDATA[Order Reference Number]]></displayName>
+    <version><![CDATA[1.6.2]]></version>
+    <description><![CDATA[Overwrites the default reference
+         and allows the shop to use a 000001 as reference]]></description>
+    <author><![CDATA[Madman]]></author>
+    <tab><![CDATA[administration]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

@@ -1,0 +1,1 @@
+Encourage customers to make a purchase faster — notify them of the product quantity left in stock with a hurry-up bar on the product page.

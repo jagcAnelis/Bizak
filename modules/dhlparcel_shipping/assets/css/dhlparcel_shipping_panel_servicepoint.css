@@ -1,0 +1,48 @@
+#dhlparcel_shipping_panel_servicepoint_preview_text {
+    margin-top: 6px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    color: #d30511;
+}
+
+#dhlparcel_shipping_panel_servicepoint_preview_description {
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    font-size: smaller;
+    margin-top: 3px;
+}
+
+#dhlparcel_shipping_panel_servicepoint_display {
+    width: 29%;
+    overflow: hidden;
+    float: right;
+}
+
+.dhlparcel_shipping_panel_servicepoint_location {
+    overflow-x: hidden;
+    font-size: smaller;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 6px 5px;
+    cursor: pointer;
+}
+
+#dhlparcel_shipping_panel_servicepoint_select_list hr {
+    padding: 0;
+    margin: 0;
+    height: 1px;
+}
+
+#dhlparcel_shipping_panel_servicepoint_search_field {
+    width: 100%;
+}
+
+.dhlparcel_shipping_panel_servicepoint_location:hover {
+    background-color: #fccc01;
+}
+
+.dhlparcel_shipping_panel_servicepoint_location:hover strong {
+    color: #d30511;
+}

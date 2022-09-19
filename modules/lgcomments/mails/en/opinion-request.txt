@@ -1,0 +1,6 @@
+We want to hear from you
+Dear {firstname},
+Thank you for your purchase at {storename}, we hope you are satisfied.
+Please take a minute of your time to rate your products and our shop.
+Click here to leave a comment: {link}
+Thank you!

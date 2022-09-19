@@ -1,0 +1,107 @@
+.canthemeblocks-reassurance-w {
+    display: flex;
+    justify-content: center;
+}
+.anthemeblocks-reassurance {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+#product .anthemeblocks-reassurance,
+#cart .anthemeblocks-reassurance {
+    display: inline-block;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.anthemeblocks-reassurance-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32%;
+    margin: 0 .5%;
+    padding: 18px 12px;
+    float: left;
+    /*background: #f7f8fb;*/
+    border-radius: 10px;
+}
+.canthemeblocks-reassurance-w {
+    /*background: #f7f8fb;*/
+    padding: 30px 0;
+    border-radius: 10px;
+}
+.anthemeblocks-reassurance-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.anthemeblocks-reassurance-item img {
+    float: left;
+    margin-right: 15px;
+}
+.anthemeblocks-reassurance-item a:hover{
+    text-decoration: none;
+}
+.reassurance-item-text {
+    display: inline-block;
+}
+.anthemeblocks-reassurance-item h6 {
+    text-align: left;
+    font-size: 16px;
+    color: #222;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.6;
+    margin: 0;
+}
+.anthemeblocks-reassurance-item p {
+    text-align: left;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1;
+    color: #6e6e6e;
+    margin: 0;
+    opacity: .7;
+}
+
+/*
+.anthemeblocks-reassurance-item span{
+    text-decoration: none;
+    color: #000 !important;
+    font-size: 14px !important;
+    font-weight: 400;
+    font-family: 'Titillium Web',sans-serif!important;
+}
+*/
+
+
+@media (max-width: 1000px){
+    .canthemeblocks-reassurance-w {
+        flex-wrap: wrap;
+    }
+    .anthemeblocks-reassurance-item {
+        width: 40%;
+        margin: 1%;
+    }
+/*
+    #product .canthemeblocks-reassurance-w,
+    #cart .canthemeblocks-reassurance-w{
+        flex-wrap: wrap;
+    }
+    #product .canthemeblocks-reassurance-w,
+    #cart .anthemeblocks-reassurance-item {
+        width: 40%;
+        margin: 1%;
+    }
+*/
+}
+
+@media (max-width: 600px){
+    .anthemeblocks-reassurance-item {
+        width: 100%;
+        margin: 1% 5%;
+    }
+}
+
+.modal-footer .anthemeblocks-reassurance {
+  display: none;
+}

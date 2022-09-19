@@ -1,0 +1,6 @@
+Nuovo recensione ricevuta
+Il cliente {customer_firstname} {customer_lastname} ha scritto una recensione sul seguente prodotto: {product_details}
+{product_name}
+{lg_score}/10 {lg_title}
+{lg_comment}
+È possibile controllare, modificare e pubblicare le recensioni dal menu "Catalogo > Recensioni Prodotti" del vostro back-office.

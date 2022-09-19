@@ -1,0 +1,126 @@
+#header .left-col {
+    display: none;
+}
+#header .position-static {
+    width: 80%;
+}
+#header .vertical-center .clearfix {
+    display: none;
+}
+
+#header #_desktop_logo {
+    text-align: center;
+}
+#header #_desktop_logo {
+    text-align: left;
+    padding: 0 15px;
+    width: 20%;
+}
+
+.categoriesproduct-block {
+    padding-top: 3.75rem!important;
+    padding-bottom: 3.75rem!important;
+}
+.page-not-found .search-widget form {
+    display: block;
+}
+.search_not_found .search-widget form button[type=submit] {
+    top: 19px;
+}
+
+#header #_desktop_cart {
+
+}
+
+#_desktop_search {
+    position: relative;
+}
+
+#_desktop_search .search-icon {
+    width: 16px;
+}
+.search-widget form input[type=text] {
+    display: flex;
+    padding: 6px 30px;
+    min-width: 240px;
+    background: none;
+    border-bottom: 1px solid rgba(0,0,0,.15) !important;
+}
+.search-widget form button[type=submit] {
+    top: 6px;
+    right: -6px;
+}
+.search-icon-in {
+    width: 16px;
+}
+@media (min-width: 992px) {
+    #header .header-top #_desktop_search {
+        display: none !important;
+    }
+}
+#header .header-top .position-static {
+    width: 80%;
+}
+#header .position-static .vertical-center {
+    justify-content: space-between;
+    padding: 0 15px;
+}
+#header .fixed-menu-right {
+    display: none;
+}
+#amegamenu .amenu-link sup {
+    top: 2px;
+}
+#amegamenu .amenu-link:before {
+    content: '┃';
+}
+#amegamenu .amenu-link:after {
+    content: '┃';
+}
+#index #header .header-top {
+    border-bottom: none;
+}
+@media (max-width: 991px) {
+    #header {
+        background: #ffffff;
+        border-bottom: 1px solid rgba(0,0,0,.07);
+    }
+    .search-widget form input[type=text] {
+        border-bottom: none !important;
+    }   
+    #header .position-static {
+        border-top: none;
+    }
+    #header #_desktop_search {
+        width: 100%;
+        margin-right: auto;
+    }
+    #header #search_widget {
+        padding: 0;
+    }
+    #header #search_widget form {
+        border: none;
+    }
+    .header-top.tablet-h .search-widget {
+        float: none;
+        padding: 0 .9375rem;
+        width: 100%;
+    }
+    .search-widget form button[type=submit] {
+        right: 2.25rem;
+        top: 15px;
+    }
+    .search-widget form input[type=text] {
+        padding: 15px 3.25rem;
+    }
+    .search-icon-in {
+        width: 22px;
+    }
+    #_mobile_cart .blockcart-link svg {
+        fill: #000;
+    }
+}
+
+#header .header-nav {
+    min-height: 40px;
+}

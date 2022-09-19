@@ -1,0 +1,100 @@
+#header .left-col {
+    display: block;
+}
+#header .position-static {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid rgba(160,160,160,.2);
+}
+#_desktop_logo {
+    text-align: center;
+}
+#_desktop_logo {
+    width: 50%;
+}
+#_desktop_cart {
+    width: 25%;
+    padding: 0 15px;
+    text-align: right;
+}
+/*
+.cart-products-text {
+    color: #dddddd;
+}
+*/
+.anthemeblocks-homeslider-desc .slider-cont-line {
+    background: rgba(255,255,255,.2);
+}
+#amegamenu .amenu-link sup {
+    top: 2px;
+}
+#amegamenu .amenu-link:before {
+    content: '┃';
+}
+#amegamenu .amenu-link:after {
+    content: '┃';
+}
+#_desktop_search .search-icon {
+    margin-left: .5rem;
+}
+.categoriesproduct-block {
+    padding-top: 2.75rem!important;
+    padding-bottom: 2.75rem!important;
+}
+@media (max-width: 991px) {
+    #header .position-static {
+        border-top: none;
+    }
+    #header #_desktop_search {
+        width: 100%;
+    }
+    .header-top.tablet-h .search-widget {
+        float: none;
+        padding: 0 .9375rem;
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    #index .header-position {
+        position: absolute;
+        width: 100%;
+        z-index: 6;
+        background: none;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    #header .header-top .search-widget {
+        top: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .header-top.tablet-h .search-widget form input[type=text]{
+        background: rgba(0,0,0,.02);
+    }
+}
+.hidden-nav {
+    transition: opacity 0.4s 0.5s, height 0.35s 0.1s !important;;
+    height: 40px !important;
+    opacity: 1 !important;
+}
+#header .header-nav {
+    margin-bottom: 0;
+    height: 0px;
+    display: block;
+    position: relative;
+    transition: opacity 0.4s 0.1s, height 0.35s 0.4s;
+    opacity: 0;
+}
+
+@media (max-width: 991px) {
+    #header .header-nav {
+        opacity: 1;
+    }  
+    #header .header-nav.tablet-h {
+        background: #111;
+    }
+    #_mobile_cart .blockcart-link svg {
+        fill: #fff;
+    }
+}

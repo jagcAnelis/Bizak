@@ -1,0 +1,178 @@
+@media screen and (max-width: 599px) {
+    .dhlparcel_shipping_modal_content {
+        width: 95vw;
+        margin: 15vh auto 0 auto;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .dhlparcel_shipping_modal_content {
+        width: 80vw;
+        margin: 8vh auto 0 auto;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .dhlparcel_shipping_modal_content {
+        width: 55vw;
+        margin: 5vh auto 0 auto;
+    }
+}
+
+.dhlparcel_shipping_modal_logo {
+    float: left;
+    width: 112px;
+    margin: 0;
+    display: block;
+    box-sizing: border-box;
+    padding-top: 18px;
+}
+
+.dhlparcel_shipping_modal_logo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.dhlparcel_shipping_modal {
+    float: left;
+    width: 112px;
+    margin: 0;
+    display: block;
+    box-sizing: border-box;
+    padding-top: 18px;
+}
+
+.dhlparcel_shipping_modal img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* The Modal (background) */
+.dhlparcel_shipping_modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.dhlparcel_shipping_modal_content {
+    background-color: #f7f7f7;
+    background-repeat: repeat-x;
+    padding: 5px 15px 20px 15px;
+    border: 1px solid #888;
+
+    font-family: "Helvetica Neue", Verdana, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* The Close Button */
+.dhlparcel_shipping_modal_close_container {
+    width:100%;
+    text-align: right;
+    padding-bottom: 38px;
+}
+
+.dhlparcel_shipping_modal_close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.dhlparcel_shipping_modal_close:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+.dhlparcel_shipping_modal_close:hover,
+.dhlparcel_shipping_modal_close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Reset table style */
+.dhlparcel_shipping_modal_content table,
+.dhlparcel_shipping_modal_content caption,
+.dhlparcel_shipping_modal_content tbody,
+.dhlparcel_shipping_modal_content tfoot,
+.dhlparcel_shipping_modal_content thead,
+.dhlparcel_shipping_modal_content tr,
+.dhlparcel_shipping_modal_content th,
+.dhlparcel_shipping_modal_content td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+.dhlparcel_shipping_modal_content tr:nth-child(odd) td,
+.dhlparcel_shipping_modal_content tr:nth-child(even) td {
+    background: transparent;
+}
+
+/* Reset input styling */
+.dhlparcel_shipping_modal_content .input-text,
+.dhlparcel_shipping_modal_content input[type="email"],
+.dhlparcel_shipping_modal_content input[type="password"],
+.dhlparcel_shipping_modal_content input[type="search"],
+.dhlparcel_shipping_modal_content input[type="text"],
+.dhlparcel_shipping_modal_content input[type="url"],
+.dhlparcel_shipping_modal_content textarea {
+    box-shadow: none;
+}
+
+.dhlparcel_shipping_modal_content .input-text:focus,
+.dhlparcel_shipping_modal_content input[type="email"]:focus,
+.dhlparcel_shipping_modal_content input[type="password"]:focus,
+.dhlparcel_shipping_modal_content input[type="search"]:focus,
+.dhlparcel_shipping_modal_content input[type="text"]:focus,
+.dhlparcel_shipping_modal_content input[type="url"]:focus,
+.dhlparcel_shipping_modal_content textarea:focus {
+    background-color: transparent;
+}
+
+/* ServicePoint */
+.dhl-parcelshop-locator div.dhlparcel_shipping_checkout_servicepoint_confirm_button {
+    height: auto;
+    margin: 15px 20% 15px 16px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #CD030C;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.dhl-parcelshop-locator div.dhlparcel_shipping_checkout_servicepoint_confirm_button:hover {
+    background-color: #e9030c;
+}

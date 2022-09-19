@@ -1,0 +1,60 @@
+<div class="panel" id="dhlparcel_shipping_panel_container">
+    <div class="panel-heading" id="dhlparcel_shipping_panel_header">
+        <img src="../modules/dhlparcel_shipping/assets/images/dhlparcel_shipping_logo_mini.png" id="dhlparcel_shipping_panel_header_image" alt="DHL">
+    </div>
+    <div id="dhlparcel_shipping_panel" class="well hidden-print">
+        <form id="dhlparcel_shipping_panel_form">
+            <div class="form-horizontal">
+
+                <!-- Business switch -->
+                <div class="form-group">
+                    <label class="control-label col-lg-3">{{ 'Tipo de envio' | trans }}</label>
+                    <div class="col-lg-9" id="dhlparcel_shipping_panel_business_container">
+                        {% include addBase('backoffice/order/panel/business.twig') %}
+                    </div>
+                </div>
+
+                <!-- Delivery method -->
+                <div class="form-group">
+                    <label class="control-label col-lg-3">{{ 'Método de entrega' | trans }}</label>
+                    <div class="col-lg-9" id="dhlparcel_shipping_panel_delivery_options_container">
+                        {% include addBase('backoffice/order/panel/delivery-options.twig') %}
+                    </div>
+                </div>
+
+                <!-- Service options -->
+                <div class="form-group">
+                    <label class="control-label col-lg-3">{{ 'Servicios extra' | trans }}</label>
+                    <div class="col-lg-9" id="dhlparcel_shipping_panel_service_options_container">
+                        {% include addBase('backoffice/order/panel/service-options.twig') %}
+                    </div>
+                </div>
+
+                <!-- Sizes -->
+                <div class="form-group">
+                    <label class="control-label col-lg-3">{{ 'Medidas y peso.' | trans }}</label>
+                    <div class="col-lg-9" id="dhlparcel_shipping_panel_sizes_container">
+                        {% include addBase('backoffice/order/panel/sizes.twig') %}
+                    </div>
+                </div>
+
+                <!-- Business switch -->
+                <input type="hidden" name="dhlparcel_shipping_order_id" value="{{ order.id }}">
+                <input type="hidden" name="dhlparcel_shipping_customer_id" value="{{  order.id_customer }}">
+                <button type="button" id="dhlparcel_shipping_panel_create" class="btn btn-primary pull-right">
+                    {{ 'Crear etiqueta'|trans }}
+                </button>
+
+                <div id="dhlparcel_shipping_panel_notifications_container">
+                    {% include addBase('backoffice/order/panel/notifications.twig') %}
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </form>
+    </div>
+
+    <div id="dhlparcel_shipping_panel_labels_container">
+        {% include addBase('backoffice/order/panel/labels.twig') %}
+    </div>
+</div>

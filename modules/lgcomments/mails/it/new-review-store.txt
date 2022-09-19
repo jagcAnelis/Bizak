@@ -1,0 +1,3 @@
+Nuovo recensione ricevuta
+Il cliente {customer_firstname} {customer_lastname} ha scritto una recensione sul vostro negozio: {score_store}/10 {title_store} {comment_store}
+È possibile controllare, modificare e pubblicare le recensioni dal menu "Catalogo > Recensioni Negozio" del vostro back-office.	

@@ -1,0 +1,73 @@
+/**
+* 2010-2021 Webkul.
+*
+* NOTICE OF LICENSE
+*
+* All right is reserved,
+* Please go through LICENSE.txt file inside our module
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade this module to newer
+* versions in the future. If you wish to customize this module for your
+* needs please refer to CustomizationPolicy.txt file inside our module for more information.
+*
+* @author Webkul IN
+* @copyright 2010-2021 Webkul IN
+* @license LICENSE.txt
+*/
+
+.ad-detail{
+    padding : 15px;
+}
+.adv-title{
+    font-size : 20px;
+    line-height : 27px;
+    font-weight : 600;
+    color : #FFFFFF;
+}
+.adv-description {
+    font-size : 16px;
+    line-height : 22px;
+    color : #FFFFFF;
+}
+.adv-description img {
+    max-width: 100%;
+    height: auto;
+}
+.adv-btn-div {
+    display : flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.adv-donate-btn {
+    font-size : 14px;
+    line-height : 19px;
+    font-weight : 600;
+    background-color : transparent;
+    border : 1px solid #FFFFFF;
+    color : #FFFFFF;
+}
+
+@media(max-width : 768px) {
+    #donation-info {
+        margin : 15px 0px;
+    }
+    #adv-btn-div {
+        justify-content : flex-start;
+    }
+}
+@media(min-width : 768px) {
+    .row-eq-height {
+        display : flex;
+      }
+}
+.adv-btn-div2 {
+    margin-top : 12px;
+}
+#adv-btn-side-div {
+    margin : 15px 0px;
+}
+#adv-donate-btn-side {
+    white-space: normal;
+}

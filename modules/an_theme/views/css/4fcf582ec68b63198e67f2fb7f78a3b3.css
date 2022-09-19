@@ -1,0 +1,106 @@
+.amenu-item .amenu-link {
+    color: #fff!important;
+}
+.amenu-item .amenu-link:hover{
+    color: #066eb6!important;
+}
+.level-1 a:hover {
+    color: #066eb6!important;
+}
+h2.wow.fadeInUp{
+     display: none!important;
+} 
+.fixed-menu {
+    background: #000!important;
+}
+.categoriesproduct-image-2 h3 {
+    display: none!important;
+}
+.categoriesproduct-image-2 p {
+    display: none!important;
+}
+
+.manufacturer-item img {
+    max-width: 75%!important;
+}
+.carousel-inner>.carousel-item>a>img, .carousel-inner>.carousel-item>img, .img-fluid, .img-thumbnail {
+    max-width: 180px!important;
+    max-height: 180px!important;
+}
+.categoriesproduct-content {
+    bottom: -75px!important;
+}
+p.h5.category-title {
+    max-width: 190px!important;
+}
+.ets_crosssell_block #products .thumbnail-container .product-thumbnail img,
+.ets_crosssell_block .featured-products .thumbnail-container .product-thumbnail img,
+.ets_crosssell_block .product-accessories .thumbnail-container .product-thumbnail img,
+.ets_crosssell_block .product-miniature .thumbnail-container .product-thumbnail img {
+    position: absolute!important;
+}
+.level-1 a {
+    padding-right: 5px!important;
+}
+a .ets_crosssell_list_blocks{
+      width:100% !important;
+}
+.anthemeblocks-producttabs .nav-tabs .nav-link.active, .anthemeblocks-producttabs .nav-tabs .nav-link.active:hover {
+    background: #f0cd3a!important;
+}
+.price, .cart-preview .product-infos .product-price {
+    color: #066eb6!important;
+}
+.product-description .an_short_description {
+    display: none!important;
+}
+.an_productattributes-qty-container {
+    display: none!important;
+}
+#header .header-top {
+     background: #ffffff00!important;
+}
+#_desktop_cart .blockcart-link svg {
+    fill: #ffffff!important;
+}
+#_desktop_cart .cart-products-count, #_desktop_cart .cart-products-text {
+    color: #ffffff!important;
+}
+.amenu-item .amenu-link {
+    color: #fff!important;
+}
+#_desktop_search .search-icon, .header-nav #_desktop_search .search-icon-in {
+    fill: #fff!important;
+}
+.dropdown .expand-more {
+    color: #fff!important;
+}
+#_desktop_user_info .user_info_icon svg {
+    fill: #fff!important;
+}
+span.account-login {
+    color: #fff!important;
+}
+#_desktop_cart {
+    width: 15%!important;
+    padding: 0 10px;
+    text-align: right;
+}
+#_desktop_cart .blockcart-link, #_mobile_cart .blockcart-link {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.site_configuration_imp {
+    display: none!important;
+}
+.brand-amount {
+    text-align: center!important;
+}
+#header {
+    background: #f7900a;
+}
+.an_brandslider-item img {
+    max-width: 90%!important;
+}

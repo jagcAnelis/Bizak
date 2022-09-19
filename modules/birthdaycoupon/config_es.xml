@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>birthdaycoupon</name>
+    <displayName><![CDATA[Cup&oacute;n de cumplea&ntilde;os]]></displayName>
+    <version><![CDATA[1.0.5]]></version>
+    <description><![CDATA[Env&iacute;o autom&aacute;tico de cupones de acuerdo a su elecci&oacute;n cumplea&ntilde;os cliente o aniversario de la inscripci&oacute;n en su sitio.]]></description>
+    <author><![CDATA[knowband]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[¿Estas seguro que lo quieres desinstalar?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

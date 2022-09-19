@@ -1,0 +1,50 @@
+<div class="table-responsive">
+    <table class="table" id="dhlparcel_shipping_label_table">
+        <thead>
+        <tr>
+            <th>
+                <span class="title_box ">Label size</span>
+            </th>
+            <th>
+                <span class="title_box ">Services</span>
+            </th>
+            <th>
+                <span class="title_box ">Trackercode</span>
+            </th>
+            <th class="text-right">
+                <span class="title_box ">Actions</span>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% for label in labels %}
+            <tr>
+                <td>{{ label.size }}</td>
+
+                <td>{{ label.services }}</td>
+                <td><a href="{{ label.trackerLink|e('html_attr') }}" target="_blank">{{ label.tracker_code }}</a></td>
+
+                <td class="pointer text-right">
+                    <span class="btn-group-action dhlparcel_shipping_panel_label_actions">
+
+                    {% for action in label.actions %}
+                        <span class="btn-group">
+                                <a class="btn btn-default _blank dhlparcel_shipping_panel_label_action"
+                                   href="{{ action.link|e('html_attr') }}"
+                                   target="_blank"
+                                   data-type="{{ action.type|e('html_attr') }}"
+                                   data-label-id="{{ label.id_label|e('html_attr') }}">
+                                <i class="icon-{{ action.icon|e('html_attr') }}"></i>
+                            </a>
+                        </span>
+                    {% endfor %}
+
+                    </span>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</div>

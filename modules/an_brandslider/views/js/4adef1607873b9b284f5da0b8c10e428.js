@@ -1,0 +1,4 @@
+var an_brandslider_params = JSON.parse("{\"margin\":0,\"center\":false,\"loop\":false,\"nav\":true,\"navRewind\":true,\"mouseDrag\":false,\"touchDrag\":true,\"dots\":false,\"lazyLoad\":false,\"autoplay\":false,\"autoplayTimeout\":2000,\"autoplayHoverPause\":false,\"smartSpeed\":250,\"responsiveRefreshRate\":200,\"AN_BRANDSLIDER_TITLE\":\"Marcas\",\"AN_BRANDSLIDER_SHOW_BLOCK_TITLE\":true,\"responsive\":{\"0\":{\"items\":1},\"480\":{\"items\":1},\"768\":{\"items\":3},\"992\":{\"items\":5},\"1200\":{\"items\":6}}}");
+an_brandslider_params['navText'] = ['<i class="material-icons">&#xE314;</i>','<i class="material-icons">&#xE315;</i>'];
+an_brandslider_params['navContainer'] = '.an_brandslider-items .owl-stage-outer';
+$(document).ready(function(){ $('.an_brandslider-items').owlCarouselAnBS(an_brandslider_params); });

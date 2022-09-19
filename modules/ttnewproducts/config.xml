@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>ttnewproducts</name>
+    <displayName><![CDATA[TT - New products block]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Displays new products on the homepage.]]></description>
+    <author><![CDATA[TemplateTrip]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

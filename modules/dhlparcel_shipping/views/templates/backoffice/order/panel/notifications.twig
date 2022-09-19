@@ -1,0 +1,25 @@
+{% if notifications is defined %}
+
+    {% if notifications.notices is not empty %}
+        {% for notice in notifications.notices %}
+            <div class="dhlparcel_shipping_panel_notification dhlparcel_shipping_panel_notification_notice">
+                {{ notice }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% if notifications.warnings is not empty %}
+        {% for warning in notifications.warnings %}
+            <div class="dhlparcel_shipping_panel_notification dhlparcel_shipping_panel_notification_warning">
+                {{ warning }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% if notifications.errors is not empty %}
+        {% for error in notifications.errors %}
+            <div class="dhlparcel_shipping_panel_notification dhlparcel_shipping_panel_notification_error">
+                {{ error }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+{% endif %}

@@ -1,0 +1,6 @@
+Votre avis nous intéresse
+Cher/Chère {firstname},
+Merci pour votre achat sur {storename}, nous espérons que vous êtes satisfait(e).
+Veuillez s'il vous plaît prendre quelques minutes pour évaluer vos produits et notre boutique :
+Cliquez ici pour laisser un avis : {link}
+Merci !

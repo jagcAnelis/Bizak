@@ -1,0 +1,15 @@
+{shop_url}
+
+Hola {firstname},
+
+ID Pedido {order_name} - Pedido cancelado
+
+Hemos cancelado tu compra con número de referencia {order_name} realizada en {shop_name}, siguiendo tus indicaciones.
+
+Esperamos que pronto te animes a disfrutar de uno de los cientos de juguetes que Bizak pone a tu disposición en nuestra tienda online.
+
+Tienes toda la información de tu pedido en la sección [Mis pedidos y detalles]({history_url}) en tu cuenta de cliente de nuestra tienda.
+
+Si tienes una cuenta de invitado, puedes seguir su pedido desde la sección: ["Seguimiento de invitado"]({guest_tracking_url}) de nuestra tienda.
+
+[{shop_name}]({shop_url})

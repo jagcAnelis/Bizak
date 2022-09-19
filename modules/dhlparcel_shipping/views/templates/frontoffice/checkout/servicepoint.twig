@@ -1,0 +1,24 @@
+<div class="dhlparcel_shipping_checkout_servicepoint"
+     {% if searchValue is defined and searchValue is not empty %}
+     data-search-value="{{ searchValue|e('html_attr') }}"
+     {% endif  %}
+     {% if countryCode is defined and countryCode is not empty  %}
+        data-country-code="{{ countryCode|e('html_attr') }}"
+     {% endif  %}>
+
+    {% if servicePoint is defined and servicePoint is not empty  %}
+        <p>
+            <span class="dhlparcel_shipping_checkout_servicepoint_name dhlparcel_shipping_notice">
+                {{ 'You have selected'|trans }} <strong>{{ servicePoint.name }}</strong>.<br/>
+                <small>{{ servicePoint.address.street }} {{ servicePoint.address.number }} {{ servicePoint.address.addition }}</small><br/>
+                <small>{{ servicePoint.address.postalCode }} {{ servicePoint.address.city }}</small>
+            </span>
+            <button type="button" class="dhlparcel_shipping_checkout_servicepoint_button">{{ 'Choose a different DHL ServicePoint'|trans|e('html_attr') }}</button>
+        </p>
+    {% else  %}
+        <p>
+            <span class="dhlparcel_shipping_checkout_servicepoint_name dhlparcel_shipping_warning">{{ 'Please choose a DHL ServicePoint.'|trans }}</span>
+            <button type="button" class="dhlparcel_shipping_checkout_servicepoint_button">{{ 'Please choose a DHL ServicePoint'|trans|e('html_attr') }}</button>
+        </p>
+    {% endif %}
+</div>

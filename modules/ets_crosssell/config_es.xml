@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>ets_crosssell</name>
+    <displayName><![CDATA[Cross Selling Pro &ndash; Upsell - Carro y todas las p&aacute;ginas]]></displayName>
+    <version><![CDATA[2.0.6]]></version>
+    <description><![CDATA[Sugerencias de productos automatizadas basadas en el inter&eacute;s del cliente mostradas en el carro, p&aacute;gina de productos y de pedidos, etc. Cross-selling Pro (Upsell) ayuda a aumentar la visibilidad de los productos y anima a los clientes a comprar m&aacute;s.]]></description>
+    <author><![CDATA[ETS-Soft]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

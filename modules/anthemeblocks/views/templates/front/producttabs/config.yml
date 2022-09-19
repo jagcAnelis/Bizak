@@ -1,0 +1,13 @@
+name: Product Tabs
+description: 
+enabled_text: false
+required_text: false
+enabled_link: false
+enabled_image: false
+
+css:
+  -
+    path: views/templates/front/producttabs/css/producttabs.css
+    priority: 200
+    position: head
+    server: local

@@ -1,0 +1,1 @@
+<div class="customtext">{$an_staticblock->content nofilter}</div>

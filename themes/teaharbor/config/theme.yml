@@ -1,0 +1,327 @@
+name: teaharbor
+display_name: Tea Harbor
+version: 1.0.2
+theme_key: 88300d82064fa04f0e7436a55c128ae9
+author:
+  name: "Anvanto Team"
+  email: "anvantoco@gmail.com"
+  url: "https://bit.ly/3ybMde2"
+
+meta:
+  compatibility:
+      from: 1.7.0.0
+      to: ~
+
+  available_layouts:
+    layout-full-width:
+      name: Full Width
+      description: No side columns, ideal for distraction-free pages such as product pages.
+    layout-both-columns:
+      name: Three Columns
+      description: One large central column and 2 side columns.
+    layout-left-column:
+      name: Two Columns, small left column
+      description: Two columns with a small left column
+    layout-right-column:
+      name: Two Columns, small right column
+      description: Two columns with a small right column
+
+dependencies:
+  modules:
+    - anproductextratabs
+    - anscrolltop
+    - anthemeblocks
+    - an_megamenu
+    - anblog
+    - an_productattributes
+    - an_logo
+    - an_wishlist
+    - an_brandslider
+    - an_hurry_up
+    - an_stickyaddtocart
+    - an_cookie_popup
+    - an_theme
+    - an_theme_dashboard
+    
+assets:
+  # If you're using this theme as child and you want to load
+  # the parent theme assets, uncomment this line.
+#  use_parent_assets: true
+
+  # The following lines are showing how to load assets in your page
+  # Uncomment and change value to start loading css or js files
+#  css:
+#    all:
+#      - id: custom-lib-style
+#        path: assets/css/custom-lib.css
+#    product:
+#      - id: product-style
+#        path: assets/css/product.css
+#        media: all
+#        priority: 200
+#  js:
+#    cart:
+#      - id: cat-extra-lib
+#        path: assets/js/cart-lib.js
+  css:
+    all:
+      - id: photoswipe-css
+        path: assets/css/photoswipe.css
+      - id: default-skin-css
+        path: assets/css/default-skin.css
+  js:
+    all:
+      - id: cookie-js
+        path: assets/js/jquery.cookie.min.js
+      - id: photoswipe-js
+        path: assets/js/photoswipe.min.js
+      - id: photoswipe-ui-default-js
+        path: assets/js/photoswipe-ui-default.min.js
+
+global_settings:
+  configuration:
+    PS_IMAGE_QUALITY: png
+  modules:
+   to_enable:
+     - ps_linklist
+     - anproductextratabs
+     - anscrolltop
+     - anthemeblocks
+     - an_megamenu
+     - anblog
+     - an_productattributes
+     - an_logo
+     - an_wishlist
+     - an_brandslider
+     - an_hurry_up
+     - an_stickyaddtocart
+     - an_cookie_popup
+     - an_theme
+     - an_theme_dashboard
+   to_disable:
+     - ps_imageslider
+  hooks:
+    modules_to_hook:
+      displayNav1:
+        - ps_contactinfo
+        - ps_languageselector
+        - ps_currencyselector
+        - anthemeblocks
+      displayNav2:
+        - anthemeblocks
+        - an_wishlist
+        - ps_customersignin
+      displayTopLeft:
+        - an_logo
+        - ps_shoppingcart
+      displayTop:
+        - an_megamenu
+        - anthemeblocks
+        - ps_searchbar
+      displayHome:
+        - anblog
+        - anthemeblocks
+      displayFooterTop:
+        - ps_socialfollow
+      displayFooterBefore:
+        - anblog
+        - anthemeblocks
+      displayFooter:
+        - ps_linklist
+        - ps_customeraccountlinks
+        - ps_contactinfo
+        - anthemeblocks
+        - anscrolltop 
+      displayAdminProductsExtra:
+        - ~
+        - anproductextratabs
+      displayProductExtraContent:
+        - anproductextratabs 
+      displayLeftColumn:
+        - ps_categorytree
+        - ps_facetedsearch
+        - anthemeblocks
+      displaySearch:
+        - ps_searchbar
+        - anthemeblocks 
+      displayMobileMenu:
+        - an_megamenu
+      displayProductListReviews:
+        - an_wishlist
+      displayProductAdditionalInfo:
+        - ps_sharebuttons
+        - an_hurry_up
+        - anthemeblocks
+      displayProductAdditionalInfo2:
+        - an_wishlist
+        - anthemeblocks
+      displayReassurance:
+        - anthemeblocks
+      displayOrderConfirmation2:
+        - ps_featuredproducts
+        - anthemeblocks 
+      displayCrossSellingShoppingCart:
+        - ps_featuredproducts
+        - anthemeblocks
+      displayBeforeBodyClosingTag:
+        - ~
+        - anthemeblocks
+      displayCartExtraProductActions:
+        - ~
+        - anthemeblocks
+      displayCopyrightContainer:
+        - ~
+        - anthemeblocks
+      displayCustomerAccount:
+        - ~
+        - anthemeblocks
+        - an_wishlist
+      displayProductListWishlist:
+        - an_wishlist
+      displayCustomerLoginFormAfter:
+        - ~
+        - anthemeblocks
+      displayFooterProduct:
+        - ~
+        - an_stickyaddtocart
+        - anthemeblocks
+      displayHomeAfter:
+        - ~
+        - anthemeblocks
+        - an_brandslider
+        - ps_emailsubscription
+      displayHomeBefore:
+        - ~
+        - anthemeblocks
+      displayLeftColumnProduct:
+        - ~
+        - anthemeblocks
+      displayMyAccountBlock:
+        - ~
+        - anthemeblocks
+      displayNav:
+        - ~
+        - anthemeblocks
+      displayNavFullWidth:
+        - ~
+        - anthemeblocks
+      displayOrderConfirmation:
+        - ~
+        - anthemeblocks
+      displayPaymentByBinaries:
+        - ~      
+        - anthemeblocks
+      displayPaymentTop:
+        - ~      
+        - anthemeblocks
+      displayRightColumn:
+        - ~      
+        - anthemeblocks
+      displayRightColumnProduct:
+        - ~      
+        - anthemeblocks
+      displayShoppingCart:
+        - ~
+        - anthemeblocks
+      displayShoppingCartFooter:
+        - ~
+        - anthemeblocks
+        - an_wishlist
+      displaySliderContainerWidth:
+        - ~
+        - anthemeblocks
+      displayTopColumn:
+        - ~
+        - anthemeblocks
+      displayBackOfficeHeader:
+        - ~
+        - anthemeblocks
+        - anscrolltop
+        - anproductextratabs
+        - an_stickyaddtocart
+        - anblog
+        - an_theme_dashboard
+      displayWrapperTop:
+        - anthemeblocks
+      displayWrapperBottom:
+        - anthemeblocks
+      displayHomeSliderFullWidth:
+        - anthemeblocks
+      displayFooterANLiveEditor:
+        - ~
+        
+  image_types:
+    cart_default:
+      width: 125
+      height: 125
+      scope: [products]
+    small_default:
+      width: 98
+      height: 98
+      scope: [products, categories, manufacturers, suppliers]
+    medium_default:
+      width: 452
+      height: 452
+      scope: [products, manufacturers, suppliers]
+    home_default:
+      width: 255
+      height: 255
+      scope: [products]
+    catalog_small:
+      width: 184
+      height: 184
+      scope: [products]
+    catalog_medium:
+      width: 255
+      height: 255
+      scope: [products]
+    catalog_large:
+      width: 398
+      height: 398
+      scope: [products]
+    large_default:
+      width: 800
+      height: 800
+      scope: [products, manufacturers, suppliers]
+    category_default:
+      width: 141
+      height: 180
+      scope: [categories]
+    stores_default:
+      width: 170
+      height: 115
+      scope: [stores]
+    menu_default:
+      width: 98
+      height: 130
+      scope: [products, categories, manufacturers, suppliers]
+    slider_photo:
+      width: 97
+      height: 97
+      scope: [products, categories, manufacturers, suppliers]
+    anblog_default:
+      width: 690
+      height: 350
+      scope: []
+    anblog_thumb:
+      width: 690
+      height: 350
+      scope: []
+    anblog_listing_leading_img:
+      width: 690
+      height: 300
+      scope: []
+    anblog_listing_secondary_img:
+      width: 390
+      height: 220
+      scope: []
+
+
+theme_settings:
+  default_layout: layout-full-width
+  layouts:
+    category: layout-left-column
+    best-sales: layout-left-column
+    new-products: layout-left-column
+    prices-drop: layout-left-column
+    contact: layout-left-column

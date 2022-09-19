@@ -1,0 +1,14 @@
+.notification_cookie {
+    background:#000000;
+    opacity:80%;
+    width:435px;            bottom: 30px;
+    left: 30px;
+                }
+
+.notification_cookie a, .notification_cookie span {
+    color: #ffffff;
+}
+.notification_cookie p,
+.notification_cookie {
+    color: #FFFFFF;
+}

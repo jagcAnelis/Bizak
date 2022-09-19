@@ -1,0 +1,4 @@
+Nuove recensioni ricevute (ordine #{id_order})
+Il cliente {customer_firstname} {customer_lastname} ha scritto una recensione sul vostro negozio: {shop_details}
+E una recensione sui seguenti prodotti: {product_details}
+È possibile controllare, modificare e pubblicare le recensioni dal menu "Catalogo > Recensioni Negozio" e "Catalogo > Recensioni Prodotti" del vostro back-office.	

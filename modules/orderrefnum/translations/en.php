@@ -1,0 +1,31 @@
+<?php
+
+global $_MODULE;
+$_MODULE = array();
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_6618dd49e431ccc327ef2bd5be09e80b'] = 'Order Reference Number';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_cef54cbe858f46800ab0e89567b5f02b'] = 'Overwrites the default reference and allows the shop to use a 000001 as reference';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_f4f70727dc34561dfde1a3c529b6205c'] = 'Settings';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_7f3609bb9cf75116d46134a28369b791'] = 'Use numeric order reference';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_daa7b3b5c13cd3ef2980fdab6a7a19b2'] = 'Change order reference from AEGOGZXRS to 000001.';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_00d23a76e43b46dae9ec7aa9dcbebb32'] = 'Enabled';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_b9f5c797ebbf55adccdd8539a65a0241'] = 'Disabled';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_2310b2a0eab15d5665468ea34483b456'] = 'Numeric reference length';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_7836a62a390298b12a46c25c343e3ebe'] = 'Set next reference number';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_41a564664bba2ce249a258d79fdcf4c8'] = 'Forcefully set lower reference number';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_1eaedeb728734be0a92a042e2ad38c86'] = 'Use with caution! PrestaShop will automatically link orders with same reference';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_9eb6b78a99cdb6ffd3d40d18621d9f80'] = 'Force';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_93878ec1734959dbeb6b35aaffcf9cd9'] = 'No Force';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_2edd4fd7922298418056dec29be5bb54'] = 'Number increase';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_08bd603993c2fffc66db2c63f3330e22'] = 'Use random increase step';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_1d5ceb08e737be50d2caf95626ce0132'] = 'Randomize the increased step, default step acts as maximum value';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_74576a047e3b9cf656f349b57cf130e8'] = 'Number increase minimum';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_da91e58e1b0d90cbe828b7cfd6bc8a70'] = 'Enable Prefix';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_7ba23aab99580df2dacb66208e297d71'] = 'Add a prefix on every reference';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_716de874a0d74f25c0aa8c444c3a7539'] = 'Prefix';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_c9cc8cce247e49bae79f15173ce97354'] = 'Save';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_1af9f2b45c86a35ee28d31158c4d18c2'] = 'Reference number can not be lower';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_0e4c55e793f547faf5933c9d5fbfb392'] = 'Reference to long!';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_767daa79b6b0c9185b4cbbc1ad3c5883'] = 'Reference was to long for this prefix, length was auto corrected';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_48c586670bd351c02313190576904425'] = 'Minimum number is higher then maximum value';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_5b4b2f95a3a7f19de2d7422bab161419'] = 'Invaild choice';
+$_MODULE['<{orderrefnum}prestashop>orderrefnum_c888438d14855d7d96a2724ee9c306bd'] = 'Settings updated';

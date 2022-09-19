@@ -1,0 +1,238 @@
+/**
+ * 2021 Anvanto
+ *
+ * NOTICE OF LICENSE
+ *
+ * This file is not open source! Each license that you purchased is only available for 1 wesite only.
+ * If you want to use this file on more websites (or projects), you need to purchase additional licenses. 
+ * You are not allowed to redistribute, resell, lease, license, sub-license or offer our resources to any third party.
+ *
+ *  @author Anvanto <anvantoco@gmail.com>
+ *  @copyright  2021 Anvanto
+ *  @license    Valid for 1 website (or project) for each purchase of license
+ *  International Registered Trademark & Property of Anvanto
+ */
+
+
+.an-input-container-checked img.an_productattributes-img {
+  border-color: #ccc;
+}
+
+.an_productattributes-img {
+  padding: 3px;
+  border-radius: 5px;  
+  border: 1px solid;
+  border-color: transparent;
+  min-height: 42px;
+}
+
+/****************/
+.anpa-loader {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  pointer-events: none;
+  transition-property: opacity;
+  transition-duration: 0.3s;
+  will-change: opacity;
+	
+  opacity: 1;
+  visibility: visible !important;
+}
+
+.anpa-loader-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  opacity: 0.8;
+}
+.anpa-loader-spinner {
+  position: relative;
+  text-indent: -9999em;
+}
+/****************/
+
+
+
+
+
+span.an_productattributes-select-price {
+	font-weight: bold;
+}
+li.an_productattributes-select-sold-out {
+  cursor: not-allowed !important;
+}
+span.an_productattributes-select-sold-out {
+  color: #fff;
+  background-color: #ffc427;
+  padding: 2px 5px;
+  margin: 0 5px;
+}
+span.an_productattributes-select-regular_price {
+  text-decoration: line-through;
+}
+span.an_productattributes-select-sale {
+  color: #fff;
+  background-color: #e53d60;
+  padding: 2px 5px;
+  margin: 0 5px;
+}
+
+
+.an_productattributes {
+  background: white;
+  box-shadow: 3px 10px 8px -2px rgba(0,0,0,.2); 
+  box-shadow: 2px 5px 8px 0 rgba(0,0,0,.2);
+  padding: 10px;
+}
+.an_productattributes select,
+.an_productattributes .an_pa_product-variants>.product-variants-item select {
+  font-size: 14px;
+  font-weight: normal;
+  width: 100%;
+  box-shadow: none;
+  background-color: #fff;
+}
+.an_productattributes-select {
+	margin-bottom: 10px;
+}
+.an_productattributes .control-label {
+    display: block;
+    padding-bottom: 3px;	
+}
+
+.an_productattributes .an_pa_product-variants>.product-variants-item {
+    margin: 7px 0;
+}
+
+
+ul.an_productattributes-group {
+  display: table;
+  margin: 0 auto;
+}
+.an_productattributes .an_pa_product-variants>.product-variants-item ul li {
+  margin: 0px 5px;
+}
+
+.an_productattributes .color,
+.custom-checkbox input[type=checkbox]+span.color {
+  margin: 0;
+}
+
+.an_productattributes-qty-container {
+  padding-right: 5px;
+  flex: 60px 0 0;
+}
+.an_productattributes-qty {
+  padding: 10px;
+  height: 44px;
+
+} 
+.an_productattributes-qty-add .an_productattributes-add {
+  flex: 1 1;
+  margin: 0;
+}
+.an_productattributes-qty-add {
+  display: flex;
+  flex-wrap: wrap;
+}
+.an_productattributes-qty-add .btn-primary {
+  margin: 0;
+  width: 100%;
+  padding: 5px 0px 5px 0px;
+  height: 2.75rem;
+  line-height: inherit;
+}
+
+.an_productattributes-product-selectbox {
+  background: #f1f1f1;
+  color: #7a7a7a;
+  border: 1px solid rgba(0,0,0,.25);
+  padding: 0;
+  position: relative;
+}
+
+.an_productattributes-product-selectbox li:hover {
+  background-color: #f5f5f5;
+}
+.an_productattributes-product-selectbox li {
+  cursor: pointer;
+  font-size: 11px;
+  padding: 5px 15px;
+}
+
+
+.an_productattributes-dropdown-toggler {
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  height: 34px;
+  line-height: 24px;
+  margin: 0;
+  padding: 5px 25px 5px 15px;
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+  font-weight: normal;
+}
+.js-an_productattributes-filter-option {
+  display: flex;
+  overflow: hidden;
+}
+.an_productattributes-dropdown-menu {
+  display: none;
+  bottom: 100%;
+  position: absolute;
+  background: #fff;
+  outline: 1px solid rgba(0,0,0,.25);
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  font-weight: normal;
+  text-align: left;
+}
+.an_productattributes-dropdown-menu ul {
+	margin: 0;
+}
+.an_productattributes-dropdown.open .an_productattributes-dropdown-menu {
+  display: block;
+}
+
+.an_productattributes-dropdown .an_productattributes-dropdown-toggler:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #000 transparent transparent transparent;
+}
+
+.an_productattributes-dropdown.open .an_productattributes-dropdown-toggler:after {
+  border-color: transparent transparent #000 transparent;
+  top: 8px;
+}
+li.product-flag {
+  z-index: 0 !important;
+}
+.product-miniature .product-price-and-shipping:after,
+.product-miniature .product-description:after {
+  display: none!important;
+ }
+ 
+.an_productattributes-img {
+  max-width: 50px;
+  cursor: pointer;
+}

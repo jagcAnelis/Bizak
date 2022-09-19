@@ -1,0 +1,10 @@
+{
+  "name": "dhlparcel/prestashop-plugin",
+  "description": "...",
+  "autoload": {
+    "psr-4": {
+      "DHLParcel\\Shipping\\": "src/"
+    }
+  },
+  "type": "prestashop-module"
+}

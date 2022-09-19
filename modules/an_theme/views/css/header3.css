@@ -1,0 +1,100 @@
+#header .left-col {
+    display: none;
+}
+#header .header-top .position-static {
+    width: 100%;
+    border-top: 1px solid #f7f7f7;
+}
+
+#header #_desktop_logo {
+    width: 20%;
+}
+.categoriesproduct-block {
+    padding-top: 3.75rem!important;
+    padding-bottom: 3.75rem!important;
+}
+#header #_desktop_cart {
+    text-align: right;
+}
+#header .position-static .vertical-center {
+    justify-content: flex-start;
+    padding: 0;    
+
+}
+#header .header-top .header-top-wrapper {
+    justify-content: space-between;
+    padding: 0 15px;    
+}
+#header .logo {
+    padding: 25px 0!important;
+}
+#header #_desktop_search {
+    margin-left: auto;
+    margin-right: 2rem;
+    width: 55%;
+}
+#header #search_widget {
+    display: block !important;
+}
+#header .header-top .search-widget {
+    position: relative !important;
+}
+#header #search_widget form{
+    border-radius: 10px;
+}
+.search-widget form input[type=text] {
+    background: #edf0f3;
+}
+.search_not_found .search-widget form input[type=text]{
+    border: none;
+}
+.search-widget form button[type=submit] {
+    right: 1.5rem !important;;
+}
+.amenu-item .amenu-link {
+    padding: 23px 35px 21px;
+}
+#amegamenu .amenu-link sup {
+    top: 2px;
+}
+
+#amegamenu .amenu-link:before {
+    content: '●';
+}
+#amegamenu .amenu-link:after {
+    content: '●';
+}
+@media (max-width: 991px) {
+    #header .position-static {
+        border-top: none;
+    }
+    #header #_desktop_search {
+        width: 100%;
+        margin-right: auto;
+    }
+    #header #search_widget {
+        padding: 0;
+    }
+    #header #search_widget form {
+        border: none;
+    }
+    #header .header-nav.tablet-h {
+        border-bottom: 1px solid #eaeaea;
+        background: #fff;
+    }
+    .header-top.tablet-h .search-widget {
+        float: none;
+        padding: 0 .9375rem;
+        width: 100%;
+    }
+    .search-widget form button[type=submit] {
+        right: 1.25rem;
+    }
+    #_mobile_cart .blockcart-link svg {
+        fill: #000;
+    }
+}
+
+#header .header-nav {
+    min-height: 40px;
+}

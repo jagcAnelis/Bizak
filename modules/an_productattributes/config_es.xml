@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>an_productattributes</name>
+    <displayName><![CDATA[Show attribute combinations in products list &amp; Add to cart]]></displayName>
+    <version><![CDATA[2.0.10]]></version>
+    <description><![CDATA[Display product combinations, discounts, availability and the &laquo;Add to cart&raquo; button &mdash; make users able to make a purchase and continue browsing the catalog. Configure view type and customize combination captions and labels.]]></description>
+    <author><![CDATA[anvanto]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+	<confirmUninstall><![CDATA[Are you sure you want to uninstall?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

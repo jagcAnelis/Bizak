@@ -1,0 +1,486 @@
+<div class="panel" id="dhlparcel_shipping_panel_container">
+    <div class="panel-heading" id="dhlparcel_shipping_panel_header">
+        <img src="../modules/dhlparcel_shipping/assets/images/dhlparcel_shipping_logo_mini.png" id="dhlparcel_shipping_panel_header_image" alt="DHL">
+        <img src="../modules/dhlparcel_shipping/assets/images/dhlparcel_shipping_ajax_loader.gif" id="dhlparcel_shipping_ajax_loader" alt="Loading" style="display:none;">
+    </div>
+    <div id="dhlparcel_shipping_panel" class="well hidden-print">
+        <form id="dhlparcel_shipping_panel_form">
+            <div class="form-horizontal">
+
+                <!-- Link -->
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Link with DHL services</label>
+                    <div class="col-lg-9" id="dhlparcel_shipping_panel_link_container">
+                        {% include '@Modules/dhlparcel_shipping/views/templates/backoffice/carrier/form/link.twig' %}
+                    </div>
+                </div>
+
+
+                <!-- Delivery method -->
+                <div class="form-group">
+                    <label class="control-label col-lg-3">{{ 'Método de entrega' | trans }}</label>
+                    <div class="col-lg-9" id="dhlparcel_shipping_panel_delivery_options_container">
+                        {% include '@Modules/dhlparcel_shipping/views/templates/backoffice/order/panel/delivery-options.twig' %}
+                    </div>
+                </div>
+
+                <!-- Service options -->
+                <div class="form-group">
+                    <label class="control-label col-lg-3">Extra services</label>
+                    <div class="col-lg-9" id="dhlparcel_shipping_panel_service_options_container">
+                        {% include '@Modules/dhlparcel_shipping/views/templates/backoffice/order/panel/service-options.twig' %}
+                    </div>
+                </div>
+
+                {#<!-- Shipping method -->#}
+                {#<div class="form-group">#}
+                    {#<label class="control-label col-lg-3">Shipping method</label>#}
+                    {#<div class="col-lg-9" id="dhlparcel_shipping_panel_delivery_options_container">#}
+                        {#<div id="dhlparcel_shipping_panel_delivery_options">#}
+                            {#<div class="clear"></div>#}
+                            {##}
+                            {##}
+                            {##}
+                            {#<div class="dhlparcel_shipping_panel_delivery_option_container" data-key="DOOR">#}
+
+                                {#<input class="dhlparcel_shipping_panel_delivery_option" name="dhlparcel_shipping_delivery_options[]" id="dhlparcel_shipping_panel_delivery_option_DOOR" value="DOOR" type="radio" data-exclusions="[&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;BP&quot;,&quot;H&quot;,&quot;NO_TT&quot;]" checked="checked">#}
+                                {#<label class="dhlparcel_shipping_panel_delivery_option_label" for="dhlparcel_shipping_panel_delivery_option_DOOR">#}
+                                    {#<div class="dhlparcel_shipping_panel_delivery_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/door.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_delivery_option_description">#}
+                                        {#Delivery to the address of the recipient#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                            {#</div>#}
+                            {##}
+                            {##}
+                            {##}
+                            {##}
+                            {#<div class="dhlparcel_shipping_panel_delivery_option_container" data-key="PS">#}
+
+                                {#<input class="dhlparcel_shipping_panel_delivery_option" name="dhlparcel_shipping_delivery_options[]" id="dhlparcel_shipping_panel_delivery_option_PS" value="PS" type="radio"#}
+                                       {#data-exclusions="[&quot;EVE&quot;,&quot;S&quot;,&quot;NBB&quot;,&quot;HANDT&quot;,&quot;DOOR&quot;,&quot;COD_CASH&quot;,&quot;COD_CHECK&quot;,&quot;EXP&quot;,&quot;H&quot;,&quot;BOUW&quot;,&quot;EXW&quot;,&quot;SSN&quot;,&quot;RECAP&quot;,&quot;BP&quot;,&quot;SDD&quot;,&quot;AGE_CHECK&quot;,&quot;COD_CASH_DUE&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_delivery_option_label" for="dhlparcel_shipping_panel_delivery_option_PS">#}
+                                    {#<div class="dhlparcel_shipping_panel_delivery_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/ps.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_delivery_option_description">#}
+                                        {#Delivery to the specified DHL Parcelshop or DHL Parcelstation#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_delivery_option_container" data-key="BP">#}
+
+                                {#<input class="dhlparcel_shipping_panel_delivery_option" name="dhlparcel_shipping_delivery_options[]" id="dhlparcel_shipping_panel_delivery_option_BP" value="BP" type="radio"#}
+                                       {#data-exclusions="[&quot;EVE&quot;,&quot;NBB&quot;,&quot;HANDT&quot;,&quot;DOOR&quot;,&quot;COD_CASH&quot;,&quot;COD_CASH_DUE&quot;,&quot;COD_CHECK&quot;,&quot;EXP&quot;,&quot;H&quot;,&quot;BOUW&quot;,&quot;EXW&quot;,&quot;SSN&quot;,&quot;RECAP&quot;,&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;EA&quot;,&quot;AGE_CHECK&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_delivery_option_label" for="dhlparcel_shipping_panel_delivery_option_BP">#}
+                                    {#<div class="dhlparcel_shipping_panel_delivery_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/bp.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_delivery_option_description">#}
+                                        {#Mailbox delivery#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                            {#</div>#}
+                        {#</div>#}
+
+
+                        {#<div id="dhlparcel_shipping_panel_delivery_options">#}
+                            {#<div class="clear"></div>#}
+                            {#<div class="dhlparcel_shipping_panel_delivery_option_container" data-key="DOOR">#}
+
+                                {#<input class="dhlparcel_shipping_panel_delivery_option" name="dhlparcel_shipping_delivery_options[]" id="dhlparcel_shipping_panel_delivery_option_DOOR" value="DOOR" type="radio" data-exclusions="[&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;BP&quot;,&quot;H&quot;,&quot;NO_TT&quot;]" checked="checked">#}
+                                {#<label class="dhlparcel_shipping_panel_delivery_option_label" for="dhlparcel_shipping_panel_delivery_option_DOOR">#}
+                                    {#<div class="dhlparcel_shipping_panel_delivery_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/door.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_delivery_option_description">#}
+                                        {#Delivery to the address of the recipient#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_delivery_option_container" data-key="H">#}
+
+                                {#<input class="dhlparcel_shipping_panel_delivery_option" name="dhlparcel_shipping_delivery_options[]" id="dhlparcel_shipping_panel_delivery_option_H" value="H" type="radio"#}
+                                       {#data-exclusions="[&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;EVE&quot;,&quot;EA&quot;,&quot;EXP&quot;,&quot;BOUW&quot;,&quot;S&quot;,&quot;BP&quot;,&quot;DOOR&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_delivery_option_label" for="dhlparcel_shipping_panel_delivery_option_H">#}
+                                    {#<div class="dhlparcel_shipping_panel_delivery_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/h.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_delivery_option_description">#}
+                                        {#Hold for collection#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                            {#</div>#}
+                        {#</div>#}
+                    {#</div>#}
+                    {#<div class="clearfix"></div>#}
+
+                {#</div>#}
+
+
+                {#<div class="form-group">#}
+                    {#<label class="control-label col-lg-3">Extra services</label>#}
+                    {#<div class="col-lg-9" id="dhlparcel_shipping_panel_service_options_container">#}
+                        {#<div id="dhlparcel_shipping_panel_service_options">#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="REFERENCE">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_REFERENCE" value="REFERENCE" type="checkbox" data-exclusions="[&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_REFERENCE">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/reference.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Reference#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="PERS_NOTE">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_PERS_NOTE" value="PERS_NOTE" type="checkbox" data-exclusions="[&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_PERS_NOTE">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/pers_note.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#E-mail to receiver#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="ADD_RETURN_LABEL">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_ADD_RETURN_LABEL" value="ADD_RETURN_LABEL" type="checkbox" data-exclusions="[&quot;NO_TT&quot;]" checked="checked">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_ADD_RETURN_LABEL">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/add_return_label.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Print extra label for return shipment#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="INS">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_INS" value="INS" type="checkbox" data-exclusions="[&quot;INS_DUE&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_INS">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/ins.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#All risks insurance#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="S">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_S" value="S" type="checkbox"#}
+                                       {#data-exclusions="[&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;EVE&quot;,&quot;EXP&quot;,&quot;H&quot;,&quot;COD_CASH&quot;,&quot;COD_CHECK&quot;,&quot;COD_CASH_DUE&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_S">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/s.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Saturday delivery#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="EXP">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_EXP" value="EXP" type="checkbox" data-exclusions="[&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;EVE&quot;,&quot;EA&quot;,&quot;S&quot;,&quot;H&quot;,&quot;BP&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_EXP">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/exp.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Expresser#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="SSN">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_SSN" value="SSN" type="checkbox" data-exclusions="[&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;EVE&quot;,&quot;EA&quot;,&quot;BP&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_SSN">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/ssn.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Undisclosed sender#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="COD_CASH">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_COD_CASH" value="COD_CASH" type="checkbox"#}
+                                       {#data-exclusions="[&quot;COD_CHECK&quot;,&quot;COD_CASH_DUE&quot;,&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;EVE&quot;,&quot;EA&quot;,&quot;BP&quot;,&quot;S&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_COD_CASH">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/cod_cash.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Cash on delivery. Payment method cash, paid by sender.#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="BOUW">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_BOUW" value="BOUW" type="checkbox" data-exclusions="[&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;EVE&quot;,&quot;EA&quot;,&quot;H&quot;,&quot;BP&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_BOUW">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/bouw.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Delivery to construction site#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="EXW">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_EXW" value="EXW" type="checkbox" data-exclusions="[&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;EVE&quot;,&quot;EA&quot;,&quot;BP&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_EXW">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/exw.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Ex Works#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="REFERENCE2">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_REFERENCE2" value="REFERENCE2" type="checkbox" data-exclusions="[&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_REFERENCE2">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/reference2.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Reference#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+
+
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="REFERENCE">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_REFERENCE" value="REFERENCE" type="checkbox" data-exclusions="[&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_REFERENCE">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/reference.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Reference#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="PERS_NOTE">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_PERS_NOTE" value="PERS_NOTE" type="checkbox" data-exclusions="[&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_PERS_NOTE">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/pers_note.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#E-mail to receiver#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="ADD_RETURN_LABEL">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_ADD_RETURN_LABEL" value="ADD_RETURN_LABEL" type="checkbox" data-exclusions="[&quot;NO_TT&quot;]" checked="checked">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_ADD_RETURN_LABEL">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/add_return_label.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Print extra label for return shipment#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="EA">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_EA" value="EA" type="checkbox"#}
+                                       {#data-exclusions="[&quot;COD_CASH&quot;,&quot;COD_CHECK&quot;,&quot;EXP&quot;,&quot;H&quot;,&quot;BOUW&quot;,&quot;EXW&quot;,&quot;SSN&quot;,&quot;RECAP&quot;,&quot;BP&quot;,&quot;COD_CASH_DUE&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_EA">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/ea.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Extra assurance#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="HANDT">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_HANDT" value="HANDT" type="checkbox" data-exclusions="[&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;BP&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_HANDT">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/handt.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Signature on delivery#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="NBB">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_NBB" value="NBB" type="checkbox" data-exclusions="[&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;BP&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_NBB">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/nbb.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#No neighbour delivery#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="SSN">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_SSN" value="SSN" type="checkbox" data-exclusions="[&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;EVE&quot;,&quot;EA&quot;,&quot;BP&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_SSN">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/ssn.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Undisclosed sender#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="AGE_CHECK">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_AGE_CHECK" value="AGE_CHECK" type="checkbox" data-exclusions="[&quot;PS&quot;,&quot;BP&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_AGE_CHECK">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/age_check.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Age check of recipient by courier#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="REFERENCE2">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_REFERENCE2" value="REFERENCE2" type="checkbox" data-exclusions="[&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_REFERENCE2">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/reference2.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Reference#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="SDD">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_SDD" value="SDD" type="checkbox" data-exclusions="[&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;EVE&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_SDD">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/sdd.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Same-day delivery#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+                            {#<div class="dhlparcel_shipping_panel_service_option_container" data-key="EVE">#}
+
+                                {#<input class="dhlparcel_shipping_panel_service_option" name="dhlparcel_shipping_service_options[]" id="dhlparcel_shipping_panel_service_option_EVE" value="EVE" type="checkbox"#}
+                                       {#data-exclusions="[&quot;PS&quot;,&quot;HANDTPS&quot;,&quot;S&quot;,&quot;COD_CASH&quot;,&quot;COD_CHECK&quot;,&quot;EXP&quot;,&quot;H&quot;,&quot;BOUW&quot;,&quot;EXW&quot;,&quot;SSN&quot;,&quot;RECAP&quot;,&quot;BP&quot;,&quot;COD_CASH_DUE&quot;,&quot;SDD&quot;,&quot;NO_TT&quot;]">#}
+                                {#<label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_EVE">#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_icon">#}
+                                        {#<img src="../modules/dhlparcel_shipping/assets/images/option/eve.svg">#}
+                                    {#</div>#}
+                                    {#<div class="dhlparcel_shipping_panel_service_option_description">#}
+                                        {#Evening delivery#}
+                                    {#</div>#}
+                                {#</label>#}
+
+                                {#<hr>#}
+
+                            {#</div>#}
+
+
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
+
+
+
+
+            </div>
+
+        </form>
+
+
+    </div>
+
+
+</div>
+

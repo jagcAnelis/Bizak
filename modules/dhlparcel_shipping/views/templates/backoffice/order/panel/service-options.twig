@@ -1,0 +1,39 @@
+{% if serviceOptions is not empty %}
+    <div id="dhlparcel_shipping_panel_service_options">
+        {% for option in serviceOptions %}
+            <div class="dhlparcel_shipping_panel_service_option_container" data-key="{{ option.key }}">
+
+                <input class="dhlparcel_shipping_panel_service_option"
+                       name="dhlparcel_shipping_service_options[]"
+                       id="dhlparcel_shipping_panel_service_option_{{ option.key }}"
+                       value="{{ option.key }}"
+                       type="checkbox"
+                       data-exclusions="{{ option.exclusionData|e('html_attr') }}"
+                        {% if option.preselected == true %}
+                            checked="checked"
+                        {% endif %}
+                >
+                <label class="dhlparcel_shipping_panel_service_option_label" for="dhlparcel_shipping_panel_service_option_{{ option.key }}">
+                    <div class="dhlparcel_shipping_panel_service_option_icon">
+                        <img src="{{ option.imageUrl }}">
+                    </div>
+                    <div class="dhlparcel_shipping_panel_service_option_description">
+                        {{ option.description }}
+                    </div>
+                </label>
+
+                {% if option.inputTemplate is not empty %}
+                    <div style="display:none" class="dhlparcel_shipping_panel_service_option_input" data-option-input="{{ option.key }}">
+                        {{ option.inputTemplate|raw }}
+                    </div>
+                {% endif  %}
+                <hr/>
+
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+<div class="dhlparcel_shipping_panel_message_unavailable">
+    <span>{{ 'No disponible' | trans }}</span>
+</div>
+{% endif %}

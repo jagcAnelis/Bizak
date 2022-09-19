@@ -1,0 +1,4 @@
+Merci d'avoir donné votre avis
+Cher/Chère {firstname},
+Nous vous remercions d'avoir donné votre avis, nous publierons prochainement vos commentaires.
+Cordialement,

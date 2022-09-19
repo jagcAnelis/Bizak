@@ -1,0 +1,12 @@
+{shop_url}
+
+Hola {firstname} {lastname},
+
+{reply}
+
+Por favor, no conteste a este correo electrónico, no recibiremos su respuesta. Para responder, hágalo desde la sección [Mis pedidos y detalles]({history_url}) en su cuenta de cliente.
+
+Si tiene una cuenta de invitado, puede responder al mensaje desde la sección: ["Seguimiento de invitado"]({guest_tracking_url}) de nuestra tienda.
+
+[{shop_name}]({shop_url})
+

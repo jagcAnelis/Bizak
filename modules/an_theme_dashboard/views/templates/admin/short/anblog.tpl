@@ -1,0 +1,1 @@
+To add or edit blog posts and categories or manage comment open AN Blog Management in the left menu. 

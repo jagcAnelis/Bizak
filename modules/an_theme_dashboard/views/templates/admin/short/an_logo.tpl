@@ -1,0 +1,1 @@
+The module enables you to use a SVG file, SVG code, and PNG file as the logo.

@@ -1,0 +1,7 @@
+Answer to your comment
+Dear {firstname},
+You have received an answer to the review you wrote about {object}:
+{stars}/10 - {title}
+"{comment}"
+Answer: "{answer}"
+Kind regards,

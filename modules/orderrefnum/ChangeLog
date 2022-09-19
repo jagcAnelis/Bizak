@@ -1,0 +1,62 @@
+Version 1.1
+* Added option to set increase step
+* Added option to set random increase step
+
+** UPDATE NOTICE TO 1.1**
+If you change the increase step / use random increase there will be one order delay untill it takes effect.
+That is beacuse the next order reference is allready set at last order, so next order reference is set after the last order is made,
+so that is why the step increase won't show untill the 2nd order.
+However, AFTER the 1st new order has been placed, you can see the next number in the confiuration of the module,
+and there you can see it has been increased using the new step you configured.
+
+Version 1.2
+* Fixed customer dobule amount spent issue
+* Fixed no payment issue on some shops
+* Removed unused code
+* Changed config to global.
+
+** UPDATE NOTICE  FOR MULTISTORES TO 1.2 **
+Changing the config to use global values, will force unique reference on all orders.
+It does not matter what store the order is from, the reference will be increased at all shops.
+Due to this, store owners need to save the reference number again in module configuration.
+The module should automaticlly get the highest value of all shops, so it should just be to press the save button.
+But it might be a good idea to double check the latest ordernumber anyway.
+
+Version 1.3
+* Added option to force new lower reference, use with caution!
+* Cleaned up error messages
+* Added options for two char prefix
+* Started applying PSR-2 coding standard
+* Fixed same reference on diffrent orders
+* Fixed bug in sql for payment
+* Added upgrade file to revert config to global
+* Fixed bad logic for unire reference check when using multishop
+* Added info about hook position
+* Added new logo based on PrestaShop 1.6 design elements
+* Finished PSR-2 coding standard
+
+Version 1.4
+* Where did it go? It's nowhere to be found!
+
+Version 1.5
+* Removed version 1.3, 1.4 upgrade files. Buggy files
+* Fixed an upgrade issue, causing reset of the module
+* Fixed an sql error
+* Added an upgrade file for PS 1.5
+* Fix Linked Order link now opens in new tab
+* Minimum version is now 1.5.0.13
+
+** UPDATE NOTICE FOR MULTISHOPS FROM 1.2 TO 1.5 **
+Config is now back as it was in 1.1, allowing for diffrent reference in diffrent shops.
+There is a automatic upgrade file, that will copy your current settings to ALL shops.
+
+Version 1.6.0
+* Added option to use same referens in all shops (Configuration must be done in ALL SHOPS mode)
+* Minor code cleaning
+
+Version 1.6.1
+* Changed version number to bump up compability to PrestaShop 1.7
+* Text change regardning Linked Order info
+
+Version 1.6.2
+* Added PrestaTrust

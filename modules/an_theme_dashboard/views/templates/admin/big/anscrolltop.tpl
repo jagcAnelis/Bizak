@@ -1,0 +1,1 @@
+<p style="text-align: center;"><img src="{$imgPath}anscrolltop.jpg" alt="" /></p>

@@ -1,0 +1,133 @@
+/* Panel */
+#dhlparcel_shipping_panel_container {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #fc0), to(rgba(255, 204, 0, 0)));
+    background-image: linear-gradient(#fc0 50%, rgba(255, 204, 0, 0));
+    background-size: auto 32px;
+    background-repeat: repeat-x;
+}
+
+#dhlparcel_shipping_panel_container.dhlparcel_shipping_panel_minimize {
+    height: 40px;
+    overflow-y: hidden;
+}
+
+#dhlparcel_shipping_panel_header {
+    cursor: row-resize;
+}
+
+img#dhlparcel_shipping_panel_header_image {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/* Delivery methods */
+input[type=radio].dhlparcel_shipping_panel_delivery_option {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+input[type=radio].dhlparcel_shipping_panel_delivery_option:checked + label.dhlparcel_shipping_panel_delivery_option_label .dhlparcel_shipping_panel_delivery_option_icon {
+    background-color: #fccc01;
+    border: solid 2px black;
+}
+
+input[type=radio].dhlparcel_shipping_panel_delivery_option:checked + label.dhlparcel_shipping_panel_delivery_option_label .dhlparcel_shipping_panel_delivery_option_description {
+    text-decoration: underline;
+}
+
+input[type=radio].dhlparcel_shipping_panel_delivery_option:disabled + label {
+    opacity: 0.2;
+}
+
+#dhlparcel_shipping_panel_delivery_options {
+    width: 100%;
+}
+
+.dhlparcel_shipping_panel_delivery_option_label {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.dhlparcel_shipping_panel_delivery_option_icon {
+    height: 32px;
+    width: 32px;
+    margin: 0;
+    padding: 4px;
+    display: inline-block;
+    border-radius: 20%;
+    border: solid 2px rgba(0, 0, 0, 0.2);
+}
+
+.dhlparcel_shipping_panel_delivery_option_description {
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    width: 100%;
+    padding-right: 30px;
+}
+
+/* Services */
+#dhlparcel_shipping_panel_service_options hr {
+    margin: 0;
+}
+
+input[type=checkbox].dhlparcel_shipping_panel_service_option:disabled + label {
+    opacity: 0.2;
+}
+
+.dhlparcel_shipping_panel_service_option_icon {
+    height: 15px;
+    width: 15px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.dhlparcel_shipping_panel_service_option_description {
+    display: inline-block;
+}
+
+/* Sizes */
+input[type=radio].dhlparcel_shipping_panel_size:disabled + label,
+input[type=radio].dhlparcel_shipping_panel_size:disabled + label + span {
+    opacity: 0.2;
+}
+
+input[type=radio].dhlparcel_shipping_panel_size + label + span {
+    font-style: italic;
+}
+
+/* Notifications */
+.dhlparcel_shipping_panel_notification_notice {
+    margin-bottom: 0;
+}
+
+.dhlparcel_shipping_panel_notification_notice {
+    color: #0a0;
+}
+
+.dhlparcel_shipping_panel_notification_warning {
+    color: #a00;
+}
+
+.dhlparcel_shipping_panel_notification_error {
+    color: #a00;
+}
+
+/* Message categories */
+.dhlparcel_shipping_panel_message_unavailable {
+    padding-top: 7px;
+    margin: 0;
+    color: #a00;
+}
+
+/* Labels */
+.dhlparcel_shipping_panel_label_buttons {
+    white-space: nowrap;
+}

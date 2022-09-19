@@ -1,0 +1,7 @@
+Risposta al tuo commento
+Stimato/aStimato/a {firstname},
+Hai ricevuto una risposta alla opinione che hai scritto su {object}:
+{stars}/10 - {title}
+"{comment}"
+Risposta: "{answer}"
+Cordiali saluti,

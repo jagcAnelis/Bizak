@@ -1,0 +1,25 @@
+<span class="switch prestashop-switch fixed-width-lg">
+    <input type="radio"
+           name="dhlparcel_shipping_is_business"
+           id="dhlparcel_shipping_is_not_business"
+           value="0"
+           {% if business is same as(false) %}
+           checked="checked"
+           {% endif %}
+    >
+    <label for="dhlparcel_shipping_is_not_business">
+        {{ 'Propietario'|trans }}
+    </label>
+    <input type="radio"
+           name="dhlparcel_shipping_is_business"
+           id="dhlparcel_shipping_is_business"
+           value="1"
+           {% if business is same as(true) %}
+           checked="checked"
+           {% endif %}
+    >
+    <label for="dhlparcel_shipping_is_business">
+        {{ 'Empresa'|trans }}
+    </label>
+    <a class="slide-button btn"></a>
+</span>

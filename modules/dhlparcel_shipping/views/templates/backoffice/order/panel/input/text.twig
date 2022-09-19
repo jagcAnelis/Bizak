@@ -1,0 +1,9 @@
+<input
+    class="dhlparcel_shipping_panel_option_data"
+    type="text"
+    placeholder="{{ placeholder|trans }}"
+
+    {% if value is not empty %}
+        value="{{ value|e('html_attr') }}"
+    {% endif %}
+/>

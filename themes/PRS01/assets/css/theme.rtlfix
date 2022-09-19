@@ -1,0 +1,188 @@
+@font-face {
+  font-family: Vazir;
+  src: url('https://res.cloudinary.com/ipresta/raw/upload/v1522045380/vazir_v18.0.0/Vazir.eot');
+  src: url('https://res.cloudinary.com/ipresta/raw/upload/v1522045380/vazir_v18.0.0/Vazir.eot?#iefix') format('embedded-opentype'),
+       url('https://res.cloudinary.com/ipresta/raw/upload/v1522045380/vazir_v18.0.0/Vazir.woff') format('woff'),
+       url('https://res.cloudinary.com/ipresta/raw/upload/v1522044764/vazir_v18.0.0/Vazir.ttf') format('truetype');
+  font-weight: normal;
+}
+      
+@font-face {
+  font-family: Vazir;
+  src: url('https://res.cloudinary.com/ipresta/raw/upload/v1522045523/vazir_v18.0.0/Vazir-Bold.eot');
+  src: url('https://res.cloudinary.com/ipresta/raw/upload/v1522045523/vazir_v18.0.0/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+       url('https://res.cloudinary.com/ipresta/raw/upload/v1522045380/vazir_v18.0.0/Vazir.woff') format('woff'),
+       url('https://res.cloudinary.com/ipresta/raw/upload/v1522045523/vazir_v18.0.0/Vazir-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url('https://res.cloudinary.com/ipresta/raw/upload/v1522044764/vazir_v18.0.0/Vazir-Light.eot');
+  src: url('https://res.cloudinary.com/ipresta/raw/upload/v1522044764/vazir_v18.0.0/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+       url('https://res.cloudinary.com/ipresta/raw/upload/v1522044764/vazir_v18.0.0/Vazir-Light.woff') format('woff'),
+       url('https://res.cloudinary.com/ipresta/raw/upload/v1522044764/vazir_v18.0.0/Vazir-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+body.lang-fa{
+	font-family: "Vazir",sans-serif;
+}
+.rtl-flip:not(.rtl-no-flip), .material-icons:not(.rtl-no-flip) {
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+}
+.magnitude:before {
+	content: "?";
+	opacity: 0;
+}
+.owl-carousel {
+	direction: ltr !important;
+}
+.owl-wrapper-outer .owl-wrapper .owl-item {
+	float: left;
+}
+.home-tab-content .owl-buttons div,
+.featured-products .owl-buttons div,
+.product-accessories .owl-buttons div,
+.crossselling-product .owl-buttons div,
+.category-products .owl-buttons div,
+.view-product .owl-buttons div,
+.ttspecial-products .owl-buttons div,
+#smartblog_block .owl-buttons div,
+#ttcategorytabs .owl-buttons div,
+.brands #ttbrandlogo-carousel .owl-buttons div {
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+
+.lightbox .lb-outerContainer .lb-container .lb-nav a.lb-prev::before, 
+.lightbox .lb-outerContainer .lb-container .lb-nav a.lb-next::before {
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+}
+.wishlist_default i {
+  transform: none !important;
+}
+#products .thumbnail-container .ttproducthover, 
+.products .thumbnail-container .ttproducthover, 
+.featured-products .thumbnail-container .ttproducthover, 
+.ttfeatured-products .thumbnail-container .ttproducthover, 
+.product-accessories .thumbnail-container .ttproducthover, 
+.ttbestseller-products .thumbnail-container .ttproducthover, 
+.ttnew-products .thumbnail-container .ttproducthover, 
+.ttspecial-products .thumbnail-container .ttproducthover, 
+.crossselling-product .thumbnail-container .ttproducthover, 
+.category-products .thumbnail-container .ttproducthover, 
+.view-product .thumbnail-container .ttproducthover {
+	direction: rtl;
+}
+#products .product-title, 
+.products .product-title, 
+.featured-products .product-title, 
+.product-accessories .product-title, 
+.ttfeatured-products .product-title, 
+.crossselling-product .product-title, 
+.ttbestseller-products .product-title, 
+.ttnew-products .product-title, 
+.ttspecial-products .product-title, 
+.category-products .product-title, 
+.view-product .product-title {
+	direction: rtl;
+}
+#smartblog_block .sdsblog-box-content #smartblog-carousel .item .blog_post .blog_content .blog_inner .sds_post_title {
+	direction: rtl;
+}
+#smartblog_block .sdsblog-box-content #smartblog-carousel .item .blog_post .blog_content .blog_inner .desc {
+	direction: rtl;
+}
+.search-widget form button[type="submit"] i {
+	-moz-transform: none;
+	-o-transform: none;
+	-webkit-transform: none;
+	transform: none;
+}
+/*---------------------- Start product customNavigation css --------------------*/
+
+.home-tab-content .owl-buttons div.owl-prev::before,
+.featured-products .owl-buttons div.owl-prev::before,
+.product-accessories .owl-buttons div.owl-prev::before,
+.crossselling-product .owl-buttons div.owl-prev::before,
+.category-products .owl-buttons div.owl-prev::before,
+.view-product .owl-buttons div.owl-prev::before,
+.ttspecial-products .owl-buttons div.owl-prev::before,
+#smartblog_block .owl-buttons div.owl-prev::before,
+#ttcategorytabs .owl-buttons div.owl-prev::before {
+	float: left;
+	left: -61px;
+	text-align: left;
+	right: auto;
+}
+.home-tab-content .owl-buttons div.owl-prev::after,
+.featured-products .owl-buttons div.owl-prev::after,
+.product-accessories .owl-buttons div.owl-prev::after,
+.crossselling-product .owl-buttons div.owl-prev::after,
+.category-products .owl-buttons div.owl-prev::after,
+.view-product .owl-buttons div.owl-prev::after,
+.ttspecial-products .owl-buttons div.owl-prev::after,
+#smartblog_block .owl-buttons div.owl-prev::after,
+#ttcategorytabs .owl-buttons div.owl-prev::after {
+	left: -41px;
+	right: auto;
+}
+.home-tab-content .owl-buttons div.owl-next::after,
+.featured-products .owl-buttons div.owl-next::after,
+.product-accessories .owl-buttons div.owl-next::after,
+.crossselling-product .owl-buttons div.owl-next::after,
+.category-products .owl-buttons div.owl-next::after,
+.view-product .owl-buttons div.owl-next::after,
+.ttspecial-products .owl-buttons div.owl-next::after,
+#smartblog_block .owl-buttons div.owl-next::after,
+#ttcategorytabs .owl-buttons div.owl-next::after {
+	right: -41px;
+	left: auto;
+}
+.home-tab-content .owl-buttons div.owl-next::before,
+.featured-products .owl-buttons div.owl-next::before,
+.product-accessories .owl-buttons div.owl-next::before,
+.crossselling-product .owl-buttons div.owl-next::before,
+.category-products .owl-buttons div.owl-next::before,
+.view-product .owl-buttons div.owl-next::before,
+.ttspecial-products .owl-buttons div.owl-next::before,
+#smartblog_block .owl-buttons div.owl-next::before,
+#ttcategorytabs .owl-buttons div.owl-next::before {
+	right: -61px;
+	left: auto;
+}
+/*---------------------- End product customNavigation css --------------------*/
+#blockcart-modal strong {
+	float: right;
+}
+#products .product-grid .thumbnail-container .hook-reviews, 
+.products .product-grid .thumbnail-container .hook-reviews, 
+.featured-products .product-grid .thumbnail-container .hook-reviews, 
+.product-accessories .product-grid .thumbnail-container .hook-reviews, 
+.crossselling-product .product-grid .thumbnail-container .hook-reviews, 
+.ttbestseller-products .product-grid .thumbnail-container .hook-reviews, 
+.ttew-products .product-grid .thumbnail-container .hook-reviews, 
+.ttspecial-products .product-grid .thumbnail-container .hook-reviews, 
+.category-products .product-grid .thumbnail-container .hook-reviews, 
+.view-product .product-grid .thumbnail-container .hook-reviews, 
+.ttfeatured-products .product-grid .thumbnail-container .hook-reviews {
+	direction: rtl;
+}
+.ttborderleftright::before {
+	left: auto;
+	right: 0;
+}
+.ttborderleftright::after {
+	left: 0;
+	right: auto;
+}

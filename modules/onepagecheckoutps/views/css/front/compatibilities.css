@@ -1,0 +1,70 @@
+/**
+ * We offer the best and most useful modules PrestaShop and modifications for your online store.
+ *
+ * We are experts and professionals in PrestaShop
+ *
+ * NOTICE OF LICENSE
+ *
+ * This file is not open source! Each license that you purchased is only available for 1 wesite only.
+ * If you want to use this file on more websites (or projects), you need to purchase additional licenses.
+ * You are not allowed to redistribute, resell, lease, license, sub-license or offer our resources to any third party.
+ *
+ * @author    PresTeamShop SAS (Registered Trademark) <info@presteamshop.com>
+ * @copyright 2011-2022 PresTeamShop SAS, All rights reserved.
+ * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License version 3.0
+ * @category  PrestaShop
+ * @category  Module
+ */
+
+/* paytpv - v7.7.1 - Paycomet */
+body#checkout #paytpv_iframe {
+    height: 1210px !important;
+    width: 375px !important;
+    margin: 0 auto;
+    display: block;
+}
+body#checkout .paytpv {
+    border: none;
+}
+
+/* correos - v5.0.21 - Correos */
+body#checkout .correos-carrer-content .correosOfficeName_ {
+    padding: 10px;
+    border: 1px solid;
+    float: left;
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+body#checkout .correos-carrer-content .correos_popuplink {
+    display: block;
+    text-align: left;
+    float: left;
+}
+
+/* openpayprestashop - v4.2.0 - Openpay SA de CV */
+body#checkout .openpay-form-container {
+    border: none;
+}
+
+/* Compatibilities Templates */
+body#checkout #header .header-container {
+    position: initial;
+}
+body#checkout #opc_main .alert::before {
+    content: none;
+}
+body#checkout #cookiesplus-modal-container {
+    min-height: auto;
+}
+body#checkout #payment-confirmation button {
+    min-height: initial;
+    max-height: initial;
+}
+/*body#checkout #opc_main div,
+body#checkout #opc_main label,
+body#checkout #opc_main p,
+body#checkout #opc_main h5,
+body#checkout #opc_main a {
+    color: initial;
+}*/

@@ -1,0 +1,44 @@
+/* Authenticate button */
+#dhlparcel_shipping_settings_authenticate.dhlparcel_shipping_authenticate_button_success,
+#dhlparcel_shipping_settings_search_printers.dhlparcel_shipping_authenticate_button_success {
+    background-color: #0a0;
+}
+#dhlparcel_shipping_settings_authenticate.dhlparcel_shipping_authenticate_button_error,
+#dhlparcel_shipping_settings_search_printers.dhlparcel_shipping_authenticate_button_error {
+    background-color: #a00;
+}
+
+div.dhlparcel_shipping_settings_suggestion_info {
+    font-size:smaller;
+    padding:5px;
+}
+
+div.dhlparcel_shipping_settings_suggestion_accounts,
+div.dhlparcel_shipping_settings_suggestion_printers {
+    display: inline-block;
+    color: #444;
+    border: 1px solid #CCC;
+    background: #FFF;
+    box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    vertical-align: middle;
+    padding: 3px 10px;
+    text-align: center;
+    margin-right: 10px;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+div.dhlparcel_shipping_settings_suggestion_accounts:hover,
+div.dhlparcel_shipping_settings_suggestion_printers:hover {
+    color:red;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}
+
+div.dhlparcel_shipping_settings_suggestion_accounts:active,
+div.dhlparcel_shipping_settings_suggestion_printers:active {
+    background: #ff0;
+}

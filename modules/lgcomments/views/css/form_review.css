@@ -1,0 +1,82 @@
+#form_review_popup .lg-label-error {
+    background: #FFAAAA;
+    border: 1px solid #DD0000;
+    color: #DD0000;
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+}
+
+#form_review_popup h3 {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.form-review-message {
+    font-size: 16px;
+    padding: 20px;
+    text-align: center;
+}
+
+.form-block {
+    margin-bottom: 20px;
+}
+
+.form-block * {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.form-block.star-rating select {
+    width: 70px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.form-block.star-rating img {
+    float: right;
+}
+
+.form-block textarea {
+    height: 100px;
+    border: 1px solid #888888;
+}
+
+.form-block input {
+    border: 1px solid #888888;
+}
+
+#form_review_popup #submit_review {
+    background: #2fb5d2;
+    border: 1px solid #2fb5d2;
+    padding: 10px;
+    border-radius: 50px;
+    display: inline-block;
+    color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+}
+
+#form_review_popup .required.empty {
+    border-color: #CC0000;
+}
+
+#form_review_popup #submit_review:hover {
+    background: #f9f9f9;
+    color: #333333;
+}
+
+#form_review_popup .empty {
+    border: 1px solid red;
+}
+
+#form_review_popup #submit_review.disabled,
+#form_review_popup #submit_review.disabled:hover {
+    background: #D9D4D1;
+    border: 1px solid #D9D4D1;
+    color: #333333;
+    cursor: none;
+}

@@ -1,0 +1,34 @@
+/**
+ * 2021 Anvanto
+ *
+ * NOTICE OF LICENSE
+ *
+ * This file is not open source! Each license that you purchased is only available for 1 wesite only.
+ * If you want to use this file on more websites (or projects), you need to purchase additional licenses.
+ * You are not allowed to redistribute, resell, lease, license, sub-license or offer our resources to any third party.
+ *
+ *  @author Anvanto <anvantoco@gmail.com>
+ *  @copyright  2021 Anvanto
+ *  @license    Valid for 1 website (or project) for each purchase of license
+ *  International Registered Trademark & Property of Anvanto
+ */
+
+.an_hurry_up {
+    margin-top: 30px;
+}
+.an_hurry_up-count {
+    font-weight: 700;
+}
+.an_hurry_up-progress {
+    width: 100%;
+    height: 6px;
+    background-color: #f9f9f9;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.an_hurry_up-progress .an_hurry_up-progress-fill {
+    background-color: #313131;
+    width: 0;
+    height: 100%;
+    border-radius: 5px;
+}

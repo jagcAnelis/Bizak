@@ -1,0 +1,76 @@
+dhlparcel_shipping_backoffice_menu:
+    path: dhlparcel-shipping/backoffice/menu
+    methods: [GET]
+    defaults:
+      _controller: 'DHLParcel\Shipping\Controller\BackOffice\MenuController::linkAction'
+      _legacy_link: DHLParcel_Shipping_BackOffice_Menu
+
+dhlparcel_shipping_backoffice_ajax_panel:
+    path: dhlparcel-shipping/backoffice/ajax/panel
+    methods: [POST]
+    defaults:
+      _controller: 'DHLParcel\Shipping\Controller\BackOffice\AjaxController::panelAction'
+      _legacy_link: DHLParcel_Shipping_BackOffice_Ajax_Panel
+
+dhlparcel_shipping_backoffice_ajax_panel_create:
+    path: dhlparcel-shipping/backoffice/ajax/panel/create
+    methods: [POST]
+    defaults:
+      _controller: 'DHLParcel\Shipping\Controller\BackOffice\AjaxController::panelCreateAction'
+      _legacy_link: DHLParcel_Shipping_BackOffice_Ajax_Panel_Create
+
+dhlparcel_shipping_backoffice_ajax_panel_delete:
+    path: dhlparcel-shipping/backoffice/ajax/panel/delete
+    methods: [POST]
+    defaults:
+      _controller: 'DHLParcel\Shipping\Controller\BackOffice\AjaxController::panelDeleteAction'
+      _legacy_link: DHLParcel_Shipping_BackOffice_Ajax_Panel_Delete
+
+dhlparcel_shipping_backoffice_ajax_panel_servicepoint:
+    path: dhlparcel-shipping/backoffice/ajax/panel/servicepoint
+    methods: [POST]
+    defaults:
+      _controller: 'DHLParcel\Shipping\Controller\BackOffice\AjaxController::panelServicePointAction'
+      _legacy_link: DHLParcel_Shipping_BackOffice_Ajax_Panel_ServicePoint
+
+dhlparcel_shipping_backoffice_ajax_authenticate:
+    path: dhlparcel-shipping/backoffice/ajax/authenticate
+    methods: [POST]
+    defaults:
+      _controller: 'DHLParcel\Shipping\Controller\BackOffice\AjaxController::authenticateAction'
+      _legacy_link: DHLParcel_Shipping_BackOffice_Ajax_Authenticate
+
+dhlparcel_shipping_backoffice_ajax_carrier_reset:
+    path: dhlparcel-shipping/backoffice/ajax/carrier/reset
+    methods: [POST]
+    defaults:
+      _controller: 'DHLParcel\Shipping\Controller\BackOffice\AjaxController::carrierResetAction'
+      _legacy_link: DHLParcel_Shipping_BackOffice_Ajax_Carrier_Reset
+
+dhlparcel_shipping_backoffice_ajax_carrier:
+    path: dhlparcel-shipping/backoffice/ajax/carrier
+    methods: [POST]
+    defaults:
+      _controller: 'DHLParcel\Shipping\Controller\BackOffice\AjaxController::carrierAction'
+      _legacy_link: DHLParcel_Shipping_BackOffice_Ajax_Carrier
+
+dhlparcel_shipping_backoffice_ajax_carrier_temporary_save:
+    path: dhlparcel-shipping/backoffice/ajax/carrier/temporary/save
+    methods: [POST]
+    defaults:
+      _controller: 'DHLParcel\Shipping\Controller\BackOffice\AjaxController::carrierTemporarySaveAction'
+      _legacy_link: DHLParcel_Shipping_BackOffice_Ajax_Carrier_Temporary_Save
+
+dhlparcel_shipping_ajax_servicepoint:
+    path: dhlparcel-shipping/ajax/servicepoint
+    methods: [POST]
+    defaults:
+      _controller: 'DHLParcel\Shipping\Controller\FrontOffice\AjaxController::servicePointAction'
+      _legacy_link: DHLParcel_Shipping_Ajax_ServicePoint
+
+dhlparcel_shipping_ajax_servicepoint_sync:
+    path: dhlparcel-shipping/ajax/servicepoint/sync
+    methods: [POST]
+    defaults:
+      _controller: 'DHLParcel\Shipping\Controller\FrontOffice\AjaxController::servicePointSyncAction'
+      _legacy_link: DHLParcel_Shipping_Ajax_ServicePointSync

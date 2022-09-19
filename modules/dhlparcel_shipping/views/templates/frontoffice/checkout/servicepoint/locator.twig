@@ -1,0 +1,28 @@
+<div class="dhlparcel_shipping_modal"
+     {% if modalId is defined and modalId is not empty %}
+     id="{{ modalId|e('html_attr') }}"
+     {% endif  %}>
+
+    <div class="dhlparcel_shipping_modal_content">
+        <div class="dhlparcel_shipping_modal_close_container">
+            {% if logo is defined and logo is not empty  %}
+            <div class="dhlparcel_shipping_modal_logo">
+                <img src="{{ logo|e('html_attr') }}"/>
+            </div>
+            {% endif %}
+            <span class="dhlparcel_shipping_modal_close">&times;</span>
+        </div>
+
+        <div id="dhl-servicepoint-locator-component"
+             data-query=""
+             data-limit="7"
+             data-disable-refresh="true"
+             data-disable-url-sync="true"
+             data-onchange="dhlparcel_shipping_select_servicepoint"
+             data-setup="dhlparcel_shipping_reset_servicepoint">
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+</div>

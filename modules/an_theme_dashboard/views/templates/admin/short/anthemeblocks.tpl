@@ -1,0 +1,1 @@
+To manage theme blocks open AN Theme Blocks in the left menu.

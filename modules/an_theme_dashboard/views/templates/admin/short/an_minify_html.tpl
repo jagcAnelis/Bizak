@@ -1,0 +1,1 @@
+The module minimizes HTML, it improves PageSpeed insights value.

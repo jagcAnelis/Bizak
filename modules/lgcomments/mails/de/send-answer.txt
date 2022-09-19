@@ -1,0 +1,6 @@
+Antwort auf deinen KommentarSehr geehrter {firstname},
+Sie haben eine Antwort auf die Bewertung erhalten, über die Sie geschrieben haben {object}:
+{stars}/10 - {title}
+"{comment}"
+Antworten:"{answer}"
+Mit freundlichen Grüßen,

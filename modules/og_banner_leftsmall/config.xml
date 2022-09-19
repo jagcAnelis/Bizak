@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>og_banner_bighome</name>
+    <displayName><![CDATA[BannerLeftSmall]]></displayName>
+    <version><![CDATA[2.1.0]]></version>
+    <description><![CDATA[Displays a big home banner on your shop.]]></description>
+    <author><![CDATA[Ogilvy]]></author>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

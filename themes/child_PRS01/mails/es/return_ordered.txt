@@ -1,0 +1,14 @@
+{shop_url}
+
+Hola {firstname},
+
+Has solicitado la Devolución del pedido {order_name}
+
+Nos has solicitado la devolución del pedido {order_name} que compraste en nuestra tienda {shop_name}. Estamos procesando dicha solicitud, pronto nos pondremos en contacto contigo.
+
+Sigue la evolución de tu pedido en nuestra tienda desde la sección [Mis pedidos y detalles]({history_url}) de tu cuenta de cliente.
+
+Si tienes una cuenta de invitado, puedes hacer el seguimiento desde la sección: ["Seguimiento de invitado"]({guest_tracking_url}) de nuestra tienda.
+
+[{shop_name}]({shop_url})
+

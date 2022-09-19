@@ -1,0 +1,12 @@
+[{shop_url}] 
+
+Hola, 
+
+Nos pediste que te avisáramos cuando {product} [{product_link}] estuviera de nuevo disponible.
+
+Adquiere {product} [{product_link}] en nuestra tienda online cuanto antes, ¡no te quedes sin él!
+
+Siempre con la confianza de Bizak.
+
+{shop_name} [{shop_url}] 
+

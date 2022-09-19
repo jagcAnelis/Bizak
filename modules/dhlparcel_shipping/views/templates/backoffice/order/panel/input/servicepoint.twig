@@ -1,0 +1,40 @@
+<input class="dhlparcel_shipping_panel_option_data"
+       type="hidden"
+       id="dhlparcel_shipping_panel_servicepoint_input"
+       {% if value is not empty %}
+           value="{{ value|e('html_attr') }}"
+       {% endif %} />
+
+<div id="dhlparcel_shipping_panel_servicepoint_preview">
+    <button type="button"
+            id="dhlparcel_shipping_panel_servicepoint_change_button"
+            class="btn btn-primary pull-right">
+        {{ 'Change'|trans }}
+    </button>
+
+    <div id="dhlparcel_shipping_panel_servicepoint_preview_text">
+        {% if servicePoint is not empty %}
+            {{ servicePoint.name }}
+        {% else %}
+            {{ 'Select a DHL ServicePoint'|trans }}
+        {% endif %}
+    </div>
+
+    <div class="clear"></div>
+    <div id="dhlparcel_shipping_panel_servicepoint_preview_description">
+        {% if servicePoint is not empty %}
+            {{ servicePoint.address.street }} {{ servicePoint.address.number }},
+            {{ servicePoint.address.postalCode }},
+            {{ servicePoint.address.city }}
+        {% endif %}
+    </div>
+    <div class="clear"></div>
+</div>
+<div id="dhlparcel_shipping_panel_servicepoint_select" style="display:none;">
+    <input id="dhlparcel_shipping_panel_servicepoint_search"
+           placeholder="{{ 'Search zipcode, city or name'|trans|e('html_attr') }}"
+           type="text" />
+    <div id="dhlparcel_shipping_panel_servicepoint_select_list">
+    </div>
+    <div class="clear"></div>
+</div>

@@ -1,0 +1,1 @@
+Wir wollen von dir hören sehr geehrter {firstname},Vielen Dank für Ihren Einkauf bei{storename}, Wir hoffen, dass Sie zufrieden sind. Bitte nehmen Sie sich einen Moment Zeit, um Ihre Produkte und unseren Shop zu bewerten. Klicken Sie hier, um einen Kommentar zu hinterlassen: {link} Vielen Dank!
