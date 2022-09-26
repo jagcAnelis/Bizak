@@ -684,6 +684,12 @@
 			{/if}
 		  </div>
 		</div>
+
+		<div class="stars">
+		    {block name='product_reviews'}
+            {hook h='displayProductListReviews' product=$product}
+        {/block}
+        </div>
 		
       <div class="product-description">
 
@@ -693,15 +699,6 @@
           <h3 class="h3 product-title" itemprop="name"><a href="{$product.url}">{$product.name|truncate:30:'...'}</a></h3>
         {/block}
 		
-		{**********  cambio de ubicacion anelis   ********}
-		<div class="stars">
-		    {block name='product_reviews'}
-            {hook h='displayProductListReviews' product=$product}
-        {/block}
-        </div>
-		{**********  cambio de ubicacion anelis   ********}
-
-
 		{if Module::isEnabled('an_theme') and Module::getInstanceByName('an_theme')->getParam('product_imageQuickLookBar') == 1}
 		<div class="product-miniature-images-all">
 		{foreach from=$product.images item=image}

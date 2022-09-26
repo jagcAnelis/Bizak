@@ -25,7 +25,7 @@
                 <span class="an_hurry_up-count">{$product.quantity}</span>
                 {$config.title_right|escape:'htmlall':'UTF-8'}
             {else}
-                <b>{$config.title_noitems|escape:'htmlall':'UTF-8'}</b>
+                {$config.title_noitems|escape:'htmlall':'UTF-8'}
             {/if}
         </div>
 		{if isset($config.show_line) AND $config.show_line=='1'}

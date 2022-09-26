@@ -99,18 +99,13 @@
       </section>
       {/block}
     </div>
-
     <div class="col-md-7">
       {block name='page_header_container'}
       {block name='page_header'}
       <h1 class="h1" itemprop="name">{block name='page_title'}{$product.name}{/block}</h1>
       {/block}
       {/block}
-
-	    {**** movido desde product-prices a peticion del cliente **}
-      {hook h='displayProductPriceBlock' product=$product type="after_price"}
-      {******** Anelis 2022 **************************************}
-      
+	  
       {block name='product_prices'}
       {include file='catalog/_partials/product-prices.tpl'}
       {/block}
@@ -159,11 +154,9 @@
             {include file='catalog/_partials/product-discounts.tpl'}
             {/block}
 
-           {if $product.quantity != 0}
-              {block name='product_add_to_cart'}
-              {include file='catalog/_partials/product-add-to-cart.tpl'}
-              {/block}
-            {/if}
+            {block name='product_add_to_cart'}
+            {include file='catalog/_partials/product-add-to-cart.tpl'}
+            {/block}
 
             {block name='product_refresh'}
             <input class="product-refresh ps-hidden-by-js" name="refresh" type="submit" value="{l s='Refresh' d='Shop.Theme.Actions'}">

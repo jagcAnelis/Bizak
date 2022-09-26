@@ -94,11 +94,7 @@
         {$product.labels.tax_long}
       {/if}
       {hook h='displayProductPriceBlock' product=$product type="price"}
-      {**** movido a product.tpl a peticion del cliente **}
-      {**{hook h='displayProductPriceBlock' product=$product type="after_price"}**}
-      {******** Anelis 2022 **************************************}
-      
-      
+      {hook h='displayProductPriceBlock' product=$product type="after_price"}
 	  {if isset($product.additional_delivery_times)}
       {if $product.additional_delivery_times == 1}
         {if $product.delivery_information}
