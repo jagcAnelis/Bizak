@@ -35,6 +35,11 @@
                   {$msg}
                 </p>
               {/if}
+              <div class="official_new wow fadeInDown" data-wow-duration=".5s" data-wow-delay=".95s">
+              {if isset($id_module)}
+                {hook h='displayGDPRConsent' id_module=$id_module}
+              {/if}
+              </div>
 
     <div class="col-md-12 wow fadeInUp" data-wow-duration=".5s" data-wow-delay="1.25s">
       <form action="{$urls.pages.index}#footer" method="post">
@@ -66,12 +71,6 @@
           </div>
         </div>
       </form>
-      <div class="official_new wow fadeInDown" data-wow-duration=".5s" data-wow-delay=".95s">
-      {if isset($id_module)}
-        {hook h='displayGDPRConsent' id_module=$id_module}
-      {/if}
-      </div>
-
     </div>
   </div>
 </div>
