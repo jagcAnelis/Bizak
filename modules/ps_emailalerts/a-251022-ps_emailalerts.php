@@ -61,7 +61,7 @@ class Ps_EmailAlerts extends Module
     {
         $this->name = 'ps_emailalerts';
         $this->tab = 'administration';
-        $this->version = '2.3.3';
+        $this->version = '2.3.0';
         $this->author = 'PrestaShop';
         $this->need_instance = 0;
 
@@ -106,12 +106,14 @@ class Ps_EmailAlerts extends Module
             !$this->registerHook('actionProductAttributeDelete') ||
             !$this->registerHook('actionProductAttributeUpdate') ||
             !$this->registerHook('actionProductCoverage') ||
+            !$this->registerHook('actionProductOutOfStock') ||
             !$this->registerHook('actionOrderReturn') ||
             !$this->registerHook('actionOrderEdited') ||
+            !$this->registerHook('registerGDPRConsent') ||
             !$this->registerHook('actionDeleteGDPRCustomer') ||
             !$this->registerHook('actionExportGDPRData') ||
             !$this->registerHook('displayProductAdditionalInfo') ||
-            !$this->registerHook('actionFrontControllerSetMedia')) {
+            !$this->registerHook('displayHeader')) {
             return false;
         }
 
@@ -285,39 +287,6 @@ class Ps_EmailAlerts extends Module
         return implode('<br/>', $result);
     }
 
-    /**
-     * Return current locale
-     *
-     * @param Context $context
-     *
-     * @return \PrestaShop\PrestaShop\Core\Localization\Locale|null
-     *
-     * @throws Exception
-     */
-    public static function getContextLocale(Context $context)
-    {
-        $locale = $context->getCurrentLocale();
-        if (null !== $locale) {
-            return $locale;
-        }
-
-        $containerFinder = new \PrestaShop\PrestaShop\Adapter\ContainerFinder($context);
-        $container = $containerFinder->getContainer();
-        if (null === $context->container) {
-            // @phpstan-ignore-next-line
-            $context->container = $container;
-        }
-
-        /** @var \PrestaShop\PrestaShop\Core\Localization\CLDR\LocaleRepository $localeRepository */
-        $localeRepository = $container->get(Controller::SERVICE_LOCALE_REPOSITORY);
-        $locale = $localeRepository->getLocale(
-            $context->language->getLocale()
-        );
-
-        // @phpstan-ignore-next-line
-        return $locale;
-    }
-
     public function hookActionValidateOrder($params)
     {
         if (!$this->merchant_order || empty($this->merchant_mails)) {
@@ -328,9 +297,6 @@ class Ps_EmailAlerts extends Module
         $context = Context::getContext();
         $id_lang = (int) $context->language->id;
         $locale = $context->language->getLocale();
-        // We use use static method from current class to prevent retro compatibility issues with PrestaShop < 1.7.7
-        $contextLocale = static::getContextLocale($context);
-
         $id_shop = (int) $context->shop->id;
         $currency = $params['currency'];
         $order = $params['order'];
@@ -365,16 +331,16 @@ class Ps_EmailAlerts extends Module
             $unit_price = Product::getTaxCalculationMethod($customer->id) == PS_TAX_EXC ? $product['product_price'] : $product['product_price_wt'];
 
             $customization_text = '';
-            if (isset($customized_datas[$product['product_id']][$product['product_attribute_id']][$order->id_address_delivery][$product['id_customization']])) {
-                foreach ($customized_datas[$product['product_id']][$product['product_attribute_id']][$order->id_address_delivery][$product['id_customization']] as $customization) {
-                    if (isset($customization[Product::CUSTOMIZE_TEXTFIELD])) {
-                        foreach ($customization[Product::CUSTOMIZE_TEXTFIELD] as $text) {
+            if (isset($customized_datas[$product['product_id']][$product['product_attribute_id']])) {
+                foreach ($customized_datas[$product['product_id']][$product['product_attribute_id']][$order->id_address_delivery] as $customization) {
+                    if (isset($customization['datas'][Product::CUSTOMIZE_TEXTFIELD])) {
+                        foreach ($customization['datas'][Product::CUSTOMIZE_TEXTFIELD] as $text) {
                             $customization_text .= $text['name'] . ': ' . $text['value'] . '<br />';
                         }
                     }
 
-                    if (isset($customization[Product::CUSTOMIZE_FILE])) {
-                        $customization_text .= count($customization[Product::CUSTOMIZE_FILE]) . ' ' . $this->trans('image(s)', [], 'Modules.Emailalerts.Admin') . '<br />';
+                    if (isset($customization['datas'][Product::CUSTOMIZE_FILE])) {
+                        $customization_text .= count($customization['datas'][Product::CUSTOMIZE_FILE]) . ' ' . $this->trans('image(s)', [], 'Modules.Emailalerts.Admin') . '<br />';
                     }
 
                     $customization_text .= '---<br />';
@@ -396,10 +362,10 @@ class Ps_EmailAlerts extends Module
                             . (!empty($customization_text) ? '<br />' . $customization_text : '')
                         . '</strong>
 					</td>
-					<td style="padding:0.6em 0.4em; text-align:right;">' . $contextLocale->formatPrice($unit_price, $currency->iso_code) . '</td>
+					<td style="padding:0.6em 0.4em; text-align:right;">' . Tools::displayPrice($unit_price, $currency, false) . '</td>
 					<td style="padding:0.6em 0.4em; text-align:center;">' . (int) $product['product_quantity'] . '</td>
 					<td style="padding:0.6em 0.4em; text-align:right;">'
-                        . $contextLocale->formatPrice(($unit_price * $product['product_quantity']), $currency->iso_code)
+                        . Tools::displayPrice(($unit_price * $product['product_quantity']), $currency, false)
                     . '</td>
 				</tr>';
         }
@@ -407,7 +373,7 @@ class Ps_EmailAlerts extends Module
             $items_table .=
                 '<tr style="background-color:#EBECEE;">
 						<td colspan="4" style="padding:0.6em 0.4em; text-align:right;">' . $this->trans('Voucher code:', [], 'Modules.Emailalerts.Admin') . ' ' . $discount['name'] . '</td>
-					<td style="padding:0.6em 0.4em; text-align:right;">-' . $contextLocale->formatPrice($discount['value'], $currency->iso_code) . '</td>
+					<td style="padding:0.6em 0.4em; text-align:right;">-' . Tools::displayPrice($discount['value'], $currency, false) . '</td>
 			</tr>';
         }
         if ($delivery->id_state) {
@@ -473,17 +439,18 @@ class Ps_EmailAlerts extends Module
             '{carrier}' => (($carrier->name == '0') ? $configuration['PS_SHOP_NAME'] : $carrier->name),
             '{payment}' => Tools::substr($order->payment, 0, 32),
             '{items}' => $items_table,
-            '{total_paid}' => $contextLocale->formatPrice($order->total_paid, $currency->iso_code),
-            '{total_products}' => $contextLocale->formatPrice($total_products, $currency->iso_code),
-            '{total_discounts}' => $contextLocale->formatPrice($order->total_discounts, $currency->iso_code),
-            '{total_shipping}' => $contextLocale->formatPrice($order->total_shipping, $currency->iso_code),
-            '{total_shipping_tax_excl}' => $contextLocale->formatPrice($order->total_shipping_tax_excl, $currency->iso_code),
-            '{total_shipping_tax_incl}' => $contextLocale->formatPrice($order->total_shipping_tax_incl, $currency->iso_code),
-            '{total_tax_paid}' => $contextLocale->formatPrice(
+            '{total_paid}' => Tools::displayPrice($order->total_paid, $currency),
+            '{total_products}' => Tools::displayPrice($total_products, $currency),
+            '{total_discounts}' => Tools::displayPrice($order->total_discounts, $currency),
+            '{total_shipping}' => Tools::displayPrice($order->total_shipping, $currency),
+            '{total_shipping_tax_excl}' => Tools::displayPrice($order->total_shipping_tax_excl, $currency, false),
+            '{total_shipping_tax_incl}' => Tools::displayPrice($order->total_shipping_tax_incl, $currency, false),
+            '{total_tax_paid}' => Tools::displayPrice(
                 $order->total_paid_tax_incl - $order->total_paid_tax_excl,
-                $currency->iso_code
+                $currency,
+                false
             ),
-            '{total_wrapping}' => $contextLocale->formatPrice($order->total_wrapping, $currency->iso_code),
+            '{total_wrapping}' => Tools::displayPrice($order->total_wrapping, $currency),
             '{currency}' => $currency->sign,
             '{gift}' => (bool) $order->gift,
             '{gift_message}' => $order->gift_message,
@@ -553,22 +520,20 @@ class Ps_EmailAlerts extends Module
 
     public function hookDisplayProductAdditionalInfo($params)
     {
-
-        if ($params['product']['minimal_quantity'] <= $params['product']['quantity'] ||
+        if (0 < $params['product']['quantity'] ||
             !$this->customer_qty ||
             !Configuration::get('PS_STOCK_MANAGEMENT') ||
             Product::isAvailableWhenOutOfStock($params['product']['out_of_stock'])) {
             return;
         }
-
         $context = Context::getContext();
         $id_product = (int) $params['product']['id'];
         $id_product_attribute = $params['product']['id_product_attribute'];
         $id_customer = (int) $context->customer->id;
         if ((int) $context->customer->id <= 0) {
-            $this->context->smarty->assign('email', 1);                   
+            $this->context->smarty->assign('email', 1);
         } elseif (MailAlert::customerHasNotification($id_customer, $id_product, $id_product_attribute, (int) $context->shop->id)) {
-            //return;
+            return;
         }
         $this->context->smarty->assign(
             [
@@ -586,17 +551,12 @@ class Ps_EmailAlerts extends Module
         $id_product = (int) $params['id_product'];
         $id_product_attribute = (int) $params['id_product_attribute'];
 
+        $quantity = (int) $params['quantity'];
         $context = Context::getContext();
         $id_shop = (int) $context->shop->id;
         $id_lang = (int) $context->language->id;
         $locale = $context->language->getLocale();
         $product = new Product($id_product, false, $id_lang, $id_shop, $context);
-
-        if (!Validate::isLoadedObject($product) || $product->active != 1) {
-            return;
-        }
-
-        $quantity = (int) $params['quantity'];
         $product_has_attributes = $product->hasAttributes();
         $configuration = Configuration::getMultiple(
             [
@@ -607,9 +567,11 @@ class Ps_EmailAlerts extends Module
             ], null, null, $id_shop
         );
         $ma_last_qties = (int) $configuration['MA_LAST_QTIES'];
+
         $check_oos = ($product_has_attributes && $id_product_attribute) || (!$product_has_attributes && !$id_product_attribute);
 
         if ($check_oos &&
+            $product->active == 1 &&
             (int) $quantity <= $ma_last_qties &&
             !(!$this->merchant_oos || empty($this->merchant_mails)) &&
             $configuration['PS_STOCK_MANAGEMENT']) {
@@ -647,33 +609,21 @@ class Ps_EmailAlerts extends Module
             }
         }
 
-        if ($product_has_attributes) {
-            $sql = 'SELECT `minimal_quantity`, `id_product_attribute`
-                FROM ' . _DB_PREFIX_ . 'product_attribute
-                WHERE id_product_attribute = ' . (int) $id_product_attribute;
-
-            $result = Db::getInstance()->getRow($sql);
-
-            if ($result && $this->customer_qty && $quantity >= $result['minimal_quantity']) {
-                MailAlert::sendCustomerAlert((int) $product->id, (int) $params['id_product_attribute']);
-            }
-        } else {
-            if ($this->customer_qty && $quantity >= $product->minimal_quantity) {
-                MailAlert::sendCustomerAlert((int) $product->id, (int) $params['id_product_attribute']);
-            }
+        if ($this->customer_qty && $quantity > 0) {
+            MailAlert::sendCustomerAlert((int) $product->id, (int) $params['id_product_attribute']);
         }
     }
 
     public function hookActionProductAttributeUpdate($params)
     {
-        $sql = 'SELECT sa.`id_product`, sa.`quantity`, pa.`minimal_quantity`
-            FROM `' . _DB_PREFIX_ . 'stock_available` sa
-            LEFT JOIN ' . _DB_PREFIX_ . 'product_attribute pa ON sa.id_product_attribute = pa.id_product_attribute
-            WHERE sa.`id_product_attribute` = ' . (int) $params['id_product_attribute'];
+        $sql = '
+			SELECT `id_product`, `quantity`
+			FROM `' . _DB_PREFIX_ . 'stock_available`
+			WHERE `id_product_attribute` = ' . (int) $params['id_product_attribute'];
 
         $result = Db::getInstance()->getRow($sql);
 
-        if ($result && $this->customer_qty && $result['quantity'] >= $result['minimal_quantity']) {
+        if ($this->customer_qty && $result['quantity'] > 0) {
             MailAlert::sendCustomerAlert((int) $result['id_product'], (int) $params['id_product_attribute']);
         }
     }
@@ -697,7 +647,7 @@ class Ps_EmailAlerts extends Module
         Db::getInstance()->execute($sql);
     }
 
-    public function hookActionProductAttributeDelete($params)
+    public function hookActionAttributeDelete($params)
     {
         if ($params['deleteAllAttributes']) {
             $sql = '
@@ -787,16 +737,13 @@ class Ps_EmailAlerts extends Module
         }
     }
 
-    public function hookActionFrontControllerSetMedia()
+    public function hookDisplayHeader()
     {
-        $this->context->controller->registerJavascript(
-            'mailalerts-js',
-            'modules/' . $this->name . '/js/mailalerts.js'
-        );
-        $this->context->controller->registerStylesheet(
-            'mailalerts-css',
-            'modules/' . $this->name . '/css/mailalerts.css'
-        );
+        $this->page_name = Dispatcher::getInstance()->getController();
+        if (in_array($this->page_name, ['product', 'account'])) {
+            $this->context->controller->addJS($this->_path . 'js/mailalerts.js');
+            $this->context->controller->addCSS($this->_path . 'css/mailalerts.css', 'all');
+        }
     }
 
     /**
@@ -1021,12 +968,12 @@ class Ps_EmailAlerts extends Module
                             [
                                 'id' => 'active_on',
                                 'value' => 1,
-                                'label' => $this->trans('Yes', [], 'Admin.Global'),
+                                'label' => $this->trans('Enabled', [], 'Admin.Global'),
                             ],
                             [
                                 'id' => 'active_off',
                                 'value' => 0,
-                                'label' => $this->trans('No', [], 'Admin.Global'),
+                                'label' => $this->trans('Disabled', [], 'Admin.Global'),
                             ],
                         ],
                     ],
@@ -1040,12 +987,12 @@ class Ps_EmailAlerts extends Module
                             [
                                 'id' => 'active_on',
                                 'value' => 1,
-                                'label' => $this->trans('Yes', [], 'Admin.Global'),
+                                'label' => $this->trans('Enabled', [], 'Admin.Global'),
                             ],
                             [
                                 'id' => 'active_off',
                                 'value' => 0,
-                                'label' => $this->trans('No', [], 'Admin.Global'),
+                                'label' => $this->trans('Disabled', [], 'Admin.Global'),
                             ],
                         ],
                     ],
@@ -1069,12 +1016,12 @@ class Ps_EmailAlerts extends Module
                     [
                         'id' => 'active_on',
                         'value' => 1,
-                        'label' => $this->trans('Yes', [], 'Admin.Global'),
+                        'label' => $this->trans('Enabled', [], 'Admin.Global'),
                     ],
                     [
                         'id' => 'active_off',
                         'value' => 0,
-                        'label' => $this->trans('No', [], 'Admin.Global'),
+                        'label' => $this->trans('Disabled', [], 'Admin.Global'),
                     ],
                 ],
             ],
@@ -1088,12 +1035,12 @@ class Ps_EmailAlerts extends Module
                     [
                         'id' => 'active_on',
                         'value' => 1,
-                        'label' => $this->trans('Yes', [], 'Admin.Global'),
+                        'label' => $this->trans('Enabled', [], 'Admin.Global'),
                     ],
                     [
                         'id' => 'active_off',
                         'value' => 0,
-                        'label' => $this->trans('No', [], 'Admin.Global'),
+                        'label' => $this->trans('Disabled', [], 'Admin.Global'),
                     ],
                 ],
             ],
@@ -1117,12 +1064,12 @@ class Ps_EmailAlerts extends Module
                     [
                         'id' => 'active_on',
                         'value' => 1,
-                        'label' => $this->trans('Yes', [], 'Admin.Global'),
+                        'label' => $this->trans('Enabled', [], 'Admin.Global'),
                     ],
                     [
                         'id' => 'active_off',
                         'value' => 0,
-                        'label' => $this->trans('No', [], 'Admin.Global'),
+                        'label' => $this->trans('Disabled', [], 'Admin.Global'),
                     ],
                 ],
             ];
@@ -1145,12 +1092,12 @@ class Ps_EmailAlerts extends Module
                     [
                         'id' => 'active_on',
                         'value' => 1,
-                        'label' => $this->trans('Yes', [], 'Admin.Global'),
+                        'label' => $this->trans('Enabled', [], 'Admin.Global'),
                     ],
                     [
                         'id' => 'active_off',
                         'value' => 0,
-                        'label' => $this->trans('No', [], 'Admin.Global'),
+                        'label' => $this->trans('Disabled', [], 'Admin.Global'),
                     ],
                 ],
         ];
