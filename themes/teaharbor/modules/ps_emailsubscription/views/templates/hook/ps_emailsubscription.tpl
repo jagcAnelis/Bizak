@@ -59,19 +59,21 @@
                 value="{$value}"
                 placeholder="{l s='Your email address' d='Shop.Forms.Labels'}"
                 aria-labelledby="block-newsletter-label"
+                class="news-bizak"
               >
             </div>
             <input type="hidden" name="action" value="0">
             <div class="clearfix"></div>
           </div>
         </div>
+             <div class="official_new wow fadeInDown" data-wow-duration=".5s" data-wow-delay=".95s">
+            {if !$customer.is_logged} 
+              {if isset($id_module)}
+                {hook h='displayGDPRConsent' id_module=$id_module}
+              {/if}
+            {/if}   
+            </div>
       </form>
-      <div class="official_new wow fadeInDown" data-wow-duration=".5s" data-wow-delay=".95s">
-      {if isset($id_module)}
-        {hook h='displayGDPRConsent' id_module=$id_module}
-      {/if}
-      </div>
-
     </div>
   </div>
 </div>
