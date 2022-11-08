@@ -2078,6 +2078,7 @@ class Ets_crosssell extends Module
     {
         if(!$this->_configs)
             $this->_defines();
+            
         $layout = Configuration::get('ETS_CS_'.Tools::strtoupper($control).'_LAYOUT');
         $configs = $this->_configs[$control];
         $sc_configs = array();
